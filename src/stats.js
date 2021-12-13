@@ -1,5 +1,6 @@
 const ordersCont = document.querySelector('.orders-container');
-const loadMoreBtn = document.querySelector('.load-more');
+const pageNumbers = document.getElementById('pagination');
+
 
 
 
@@ -62,7 +63,8 @@ const showOrders = () => {
             }
 
 
-            const allOrders = document.querySelectorAll('.order');
+            const nodeListOrders = document.querySelectorAll('.order');
+            const allOrders = Array.from(nodeListOrders);
             const section = document.querySelector('section');
             for (let i = 0; i < allOrders.length; i++) {
                 allOrders[i].addEventListener('click', () => {
@@ -76,16 +78,58 @@ const showOrders = () => {
                     // console.log(res.data[i].id);
                     // console.log(res.data[i].items.map((item)=>`${item.category}: ${item.amount}`))
 
-                    popupText.textContent = res.data[i].items.map((item)=>`${item.category}: ${item.amount}`)
+                    popupText.textContent = res.data[i].items.map((item) => `${item.category}: ${item.amount}`)
                 });
             }
 
+            let currentPage = 1;
+            let rows = 2;
+            const displayList = (items, wrapper, rowsPerPage, page) => {
+                wrapper.innerHTML = "";
+                page--;
+                let start = rowsPerPage * page;
+                let end = start + rowsPerPage;
+                let paginatedItems = items.slice(start, end);
+                // console.log(paginatedItems);
+                for (let i = 0; i < paginatedItems.length; i++) {
+                    let item = paginatedItems[i];
+                    wrapper.appendChild(item);
+                }
+            }
 
+            const setupPagination = (items, wrapper, rowsPerPage) => {
+                wrapper.innerHTML = '';
 
+                let pageCount = Math.ceil(items.length / rowsPerPage);
+                for (let i = 1; i < pageCount + 1; i++) {
+                    let btn = paginationButton(i, items);
+                    wrapper.appendChild(btn);
+                }
 
+            }
 
+            const paginationButton = (page, items) => {
+                let button = document.createElement('button');
+                button.innerText = page;
 
+                if (currentPage == page) {
+                    button.classList.add('active');
+                };
 
+                button.addEventListener('click', () => {
+                    currentPage = page;
+                    displayList(items, ordersCont, rows, currentPage);
+
+                    let currentBtn = document.querySelector('.pagenumbers button.active');
+                    currentBtn.classList.remove('active');
+
+                    button.classList.add('active');
+                })
+                return button;
+            }
+
+            displayList(allOrders, ordersCont, rows, currentPage);
+            setupPagination(allOrders, pageNumbers, rows);
 
         })
         .catch(function (error) {

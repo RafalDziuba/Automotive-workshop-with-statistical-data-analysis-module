@@ -201,4 +201,22 @@ section .order-popup {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+
+section .pagenumbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .pagenumbers button {
+  padding: 3px 5px;
+  margin-top: 3rem;
+  margin-left: 0.5rem;
+}
 /*# sourceMappingURL=stats.css.map */
