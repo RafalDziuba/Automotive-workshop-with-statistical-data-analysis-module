@@ -9,7 +9,7 @@
 
 body {
   height: 200vh;
-  background-color: #e1e1e4;
+  background-color: #e3f2fd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +18,7 @@ body {
 nav {
   height: 100%;
   width: 20%;
-  background-color: #c9cbcc;
+  background-color: #1565c0;
   position: fixed;
   -webkit-box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
           box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
@@ -27,7 +27,7 @@ nav {
 nav .nav-header {
   height: 8%;
   width: 100%;
-  background-color: #b1b1b1;
+  background-color: #2196f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +45,7 @@ nav .nav-header {
 
 nav .nav-header p {
   font-size: 3rem;
-  color: #9c2c2c;
+  color: white;
   font-weight: bold;
 }
 
@@ -70,7 +70,7 @@ nav .nav-list-element a {
   font-size: 2rem;
   cursor: pointer;
   text-decoration: none;
-  color: #272727;
+  color: white;
   -webkit-transition: margin 0.2s;
   transition: margin 0.2s;
   display: -webkit-box;
@@ -87,7 +87,7 @@ nav .nav-list-element a i {
 }
 
 nav .nav-list-element a:hover {
-  color: #9c2c2c;
+  text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 8px;
   margin-left: 15%;
 }
 
@@ -102,7 +102,7 @@ nav .nav-logout {
 
 nav .nav-logout a {
   text-decoration: none;
-  color: #ce0606;
+  color: white;
   font-size: 2rem;
   margin-left: 12%;
   -webkit-transition: margin 0.2s;
@@ -115,7 +115,7 @@ nav .nav-logout a i {
 }
 
 nav .nav-logout a:hover {
-  color: #9c2c2c;
+  text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 8px;
   margin-left: 15%;
 }
 
@@ -151,8 +151,10 @@ section .orders-container {
 section .orders-container .order {
   height: 150px;
   width: 320px;
-  background-color: #fff;
+  background-color: #2196f3;
   margin-top: 2rem;
+  border-radius: 60px 20px 60px 20px;
+  overflow: hidden;
 }
 
 section .orders-container .order .order-basic-style {
@@ -178,28 +180,83 @@ section .orders-container .order .order-basic-style .model {
   margin-left: 5%;
 }
 
-section .orders-container .order .brand-info {
-  background-color: red;
-}
-
-section .orders-container .order .price-info {
-  background-color: green;
-}
-
-section .orders-container .order .date-info {
-  background-color: blue;
-}
-
 section .order-popup {
-  width: 50%;
-  height: 70vh;
-  background-color: red;
+  width: 40%;
+  height: 65vh;
+  background-color: #1565c0;
   position: fixed;
   z-index: 1;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .order-popup .orders-info-container {
+  margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .order-popup .orders-info-container .popup-orders-info {
+  width: 80%;
+  margin-top: 2%;
+  background-color: white;
+  padding: 7px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+section .order-popup .orders-info-container .popup-orders-info p {
+  font-size: 1.4rem;
+}
+
+section .order-popup .popup-menu {
+  width: 100%;
+}
+
+section .order-popup .popup-menu .close-btn {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+
+section .order-popup .popup-menu .close-btn .close {
+  padding: 7px 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #1565c0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
+  -webkit-transition: padding 0.2s linear;
+  transition: padding 0.2s linear;
+}
+
+section .order-popup .popup-menu .close-btn .close:hover {
+  padding: 9px 12px;
 }
 
 section .pagenumbers {

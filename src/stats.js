@@ -71,14 +71,31 @@ const showOrders = () => {
 
                     const popup = document.createElement('div');
                     const popupText = document.createElement('p');
+                    const popupMenu = document.createElement('div');
+                    const closeContainer = document.createElement('div');
+                    const closeBtn = document.createElement('button');
                     section.appendChild(popup);
+                    popup.appendChild(popupMenu);
+                    popupMenu.appendChild(closeContainer);
+                    closeContainer.appendChild(closeBtn);
                     popup.appendChild(popupText);
+
+                    popupMenu.classList.add('popup-menu');
+                    closeContainer.classList.add('close-btn')
+                    closeBtn.classList.add('close')
                     popup.classList.add('order-popup');
                     popupText.classList.add('popup-info');
+
+                    closeBtn.textContent = 'X';
                     // console.log(res.data[i].id);
                     // console.log(res.data[i].items.map((item)=>`${item.category}: ${item.amount}`))
 
+                    const closePopup = () => {
+                        section.removeChild(popup);
+                    }
+
                     popupText.textContent = res.data[i].items.map((item) => `${item.category}: ${item.amount}`)
+                    closeBtn.addEventListener('click', closePopup);
                 });
             }
 
@@ -90,7 +107,6 @@ const showOrders = () => {
                 let start = rowsPerPage * page;
                 let end = start + rowsPerPage;
                 let paginatedItems = items.slice(start, end);
-                // console.log(paginatedItems);
                 for (let i = 0; i < paginatedItems.length; i++) {
                     let item = paginatedItems[i];
                     wrapper.appendChild(item);
