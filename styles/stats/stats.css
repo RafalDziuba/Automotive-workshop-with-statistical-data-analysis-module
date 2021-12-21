@@ -151,6 +151,7 @@ section .orders-container {
 section .orders-container .order {
   height: 150px;
   width: 320px;
+  margin-left: 5px;
   background-color: #2196f3;
   margin-top: 2rem;
   border-radius: 0px 20px 0px 20px;
@@ -159,9 +160,45 @@ section .orders-container .order {
   overflow: hidden;
 }
 
+section .orders-container .order .order-menu-container {
+  height: 25%;
+  width: 100%;
+  background-color: #55b2e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .orders-container .order .order-menu-container button {
+  background: none;
+  border: none;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+section .orders-container .order .order-menu-container button i {
+  font-size: 2.4rem;
+  color: #faf8f8;
+}
+
+section .orders-container .order .order-menu-container .btn-show {
+  margin-left: 2rem;
+}
+
+section .orders-container .order .order-menu-container button:hover .fa-trash {
+  color: red;
+}
+
+section .orders-container .order .order-menu-container .btn-show:hover i {
+  color: purple;
+}
+
 section .orders-container .order .order-basic-style {
   width: 100%;
-  height: 33.333%;
+  height: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,9 +219,76 @@ section .orders-container .order .order-basic-style .model {
   margin-left: 5%;
 }
 
+section .cancel-btn-popup {
+  width: 40%;
+  height: 100px;
+  background-color: #2a56e7;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-25%, -50%);
+          transform: translate(-25%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+section .cancel-btn-popup p {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+}
+
+section .cancel-btn-popup button {
+  padding: 1rem 1.8rem;
+  font-size: 1.3rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+section .cancel-btn-popup .cancel-btn-confirm {
+  margin-left: 8rem;
+  background-color: #f11c1c;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+section .cancel-btn-popup .cancel-btn-confirm:hover {
+  -webkit-box-shadow: 0px 0px 8px 0px #f11c1c;
+          box-shadow: 0px 0px 8px 0px #f11c1c;
+}
+
+section .cancel-btn-popup .cancel-btn-decline {
+  background-color: #8f8989;
+}
+
+section .cancel-btn-popup .cancel-btn-decline:hover {
+  -webkit-box-shadow: 0px 0px 6px 0px #8f8989;
+          box-shadow: 0px 0px 6px 0px #8f8989;
+}
+
 section .order-popup {
   width: 40%;
-  height: 65vh;
+  height: 75vh;
   background-color: #1565c0;
   position: fixed;
   z-index: 1;

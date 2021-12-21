@@ -15,20 +15,29 @@ const showOrders = () => {
                 const orderBrand = document.createElement('div');
                 const orderPrice = document.createElement('div');
                 const orderDate = document.createElement('div');
+                const orderMenu = document.createElement('div');
+
+                const orderMenuButton = document.createElement('button');
+                const orderMenuShow = document.createElement('button');
+                const cancelBtn = document.createElement('i');
+                const showMore = document.createElement('i');
 
                 const spanBrand = document.createElement('span');
-                const spanModel = document.createElement('span');
                 const spanPrice = document.createElement('span');
                 const spanDate = document.createElement('span');
 
 
 
-                // spanBrand.setAttribute('class', 'brand');
-                spanModel.setAttribute('class', 'model');
+
+
+                spanBrand.setAttribute('class', 'brand');
                 spanPrice.setAttribute('class', 'price');
                 spanDate.setAttribute('class', 'date');
 
+                orderMenuButton.classList.add('delete-btn');
+                orderMenuShow.classList.add('btn-show');
                 orderWrap.classList.add('order');
+                orderMenu.classList.add('order-menu-container');
                 orderBrand.classList.add('brand-info');
                 orderBrand.classList.add('order-basic-style');
 
@@ -38,13 +47,22 @@ const showOrders = () => {
                 orderDate.classList.add('date-info');
                 orderDate.classList.add('order-basic-style');
 
+                cancelBtn.classList.add('fa-trash');
+                cancelBtn.classList.add('fas');
+                showMore.classList.add('fas');
+                showMore.classList.add('fa-eye');
+
+                orderMenu.appendChild(orderMenuButton);
+                orderMenu.appendChild(orderMenuShow);
+                orderMenuButton.appendChild(cancelBtn);
+                orderMenuShow.appendChild(showMore);
                 ordersCont.appendChild(orderWrap);
+                orderWrap.appendChild(orderMenu)
                 orderWrap.appendChild(orderBrand);
                 orderWrap.appendChild(orderPrice);
                 orderWrap.appendChild(orderDate);
 
                 orderBrand.appendChild(spanBrand);
-                orderBrand.appendChild(spanModel);
                 orderPrice.appendChild(spanPrice);
                 orderDate.appendChild(spanDate);
 
@@ -53,9 +71,14 @@ const showOrders = () => {
 
             const priceList = document.querySelectorAll('.price');
             const dateList = document.querySelectorAll('.date');
+            const brandList = document.querySelectorAll('.brand');
 
             for (let i = 0; i < priceList.length; i++) {
                 priceList[i].textContent = res.data[i].total_amount;
+            }
+
+            for (let i = 0; i < priceList.length; i++) {
+                brandList[i].textContent = res.data[i].brand;
             }
 
             for (let i = 0; i < dateList.length; i++) {
@@ -63,11 +86,54 @@ const showOrders = () => {
             }
 
 
+            // console.log(deleteOrderBtn)
+            const section = document.querySelector('section');
+
+            const deleteOrderBtn = document.querySelectorAll('.delete-btn');
+
+            for (i = 0; i < deleteOrderBtn.length; i++) {
+                deleteOrderBtn[i].addEventListener('click', () => {
+                    const cancelPopup = document.createElement('div');
+                    const cancelText = document.createElement('p');
+                    let cancelButtonConfirm = document.createElement('button');
+                    let cancelButtonDecline = document.createElement('button');
+
+
+                    section.appendChild(cancelPopup);
+                    cancelPopup.appendChild(cancelText);
+                    cancelPopup.appendChild(cancelButtonDecline);
+                    cancelPopup.appendChild(cancelButtonConfirm);
+
+                    cancelPopup.classList.add('cancel-btn-popup');
+                    cancelButtonDecline.classList.add('cancel-btn-decline');
+                    cancelButtonConfirm.classList.add('cancel-btn-confirm');
+
+                    cancelButtonConfirm.textContent = 'Delete';
+                    cancelButtonDecline.textContent = "Cancel";
+                    cancelText.textContent = 'Are you sure?';
+
+
+                    const removePopup = () => {
+                        section.removeChild(cancelPopup);
+                    }
+
+                    cancelButtonDecline.addEventListener('click', removePopup);
+                    // cancelButtonDecline.addEventListener('click', section.removeChild(cancelPopup));
+                })
+            }
+
+
+
+
+
+
             const nodeListOrders = document.querySelectorAll('.order');
             const allOrders = Array.from(nodeListOrders);
-            const section = document.querySelector('section');
-            for (let i = 0; i < allOrders.length; i++) {
-                allOrders[i].addEventListener('click', () => {
+
+            const displayPopupBtn = document.querySelectorAll('.btn-show');
+
+            for (let i = 0; i < displayPopupBtn.length; i++) {
+                displayPopupBtn[i].addEventListener('click', () => {
 
                     const popup = document.createElement('div');
                     const popupMenu = document.createElement('div');
@@ -230,7 +296,7 @@ const showOrders = () => {
             }
 
             let currentPage = 1;
-            let rows = 6;
+            let rows = 2;
             const displayList = (items, wrapper, rowsPerPage, page) => {
                 wrapper.innerHTML = "";
                 page--;
