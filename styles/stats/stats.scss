@@ -126,8 +126,10 @@ section {
             width: 320px;
             background-color: $primaryColor;
             margin-top: 2rem;
-            border-radius: 60px 20px 60px 20px;
+            border-radius: 0px 20px 0px 20px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             overflow: hidden;
+
             
 
             .order-basic-style {
@@ -161,6 +163,8 @@ section {
             // }
         }
 
+
+
     }
 
 
@@ -183,7 +187,7 @@ section {
             align-items: center;
             flex-direction: column;
 
-            .popup-orders-info {
+             .popup-orders-info {
                 width: 80%;
                 margin-top: 2%;
                 background-color: white;

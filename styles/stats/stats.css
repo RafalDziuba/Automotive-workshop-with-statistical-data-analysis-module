@@ -153,7 +153,9 @@ section .orders-container .order {
   width: 320px;
   background-color: #2196f3;
   margin-top: 2rem;
-  border-radius: 60px 20px 60px 20px;
+  border-radius: 0px 20px 0px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   overflow: hidden;
 }
 

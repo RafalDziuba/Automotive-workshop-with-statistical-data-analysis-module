@@ -9,7 +9,7 @@
 
 body {
   height: 200vh;
-  background-color: #e1e1e4;
+  background-color: #e3f2fd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +18,7 @@ body {
 nav {
   height: 100%;
   width: 20%;
-  background-color: #c9cbcc;
+  background-color: #1565c0;
   position: fixed;
   -webkit-box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
           box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
@@ -27,7 +27,7 @@ nav {
 nav .nav-header {
   height: 8%;
   width: 100%;
-  background-color: #b1b1b1;
+  background-color: #2196f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +45,7 @@ nav .nav-header {
 
 nav .nav-header p {
   font-size: 3rem;
-  color: #9c2c2c;
+  color: white;
   font-weight: bold;
 }
 
@@ -70,7 +70,7 @@ nav .nav-list-element a {
   font-size: 2rem;
   cursor: pointer;
   text-decoration: none;
-  color: #272727;
+  color: white;
   -webkit-transition: margin 0.2s;
   transition: margin 0.2s;
   display: -webkit-box;
@@ -87,7 +87,7 @@ nav .nav-list-element a i {
 }
 
 nav .nav-list-element a:hover {
-  color: #9c2c2c;
+  text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 8px;
   margin-left: 15%;
 }
 
@@ -102,7 +102,7 @@ nav .nav-logout {
 
 nav .nav-logout a {
   text-decoration: none;
-  color: #ce0606;
+  color: white;
   font-size: 2rem;
   margin-left: 12%;
   -webkit-transition: margin 0.2s;
@@ -115,7 +115,7 @@ nav .nav-logout a i {
 }
 
 nav .nav-logout a:hover {
-  color: #9c2c2c;
+  text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 8px;
   margin-left: 15%;
 }
 
@@ -134,7 +134,6 @@ section {
 section header {
   height: 20vh;
   width: 100%;
-  background-color: aliceblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,11 +152,12 @@ section header .total-orders {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ccb139;
+  background-color: #bbdefb;
 }
 
 section header .total-orders p {
   margin-left: 15%;
+  color: #d316a4;
 }
 
 section header .total-orders p,
@@ -174,11 +174,12 @@ section header .total-income {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #7be25c;
+  background-color: #b6d6fa;
 }
 
 section header .total-income p {
   margin-left: 15%;
+  color: #d316a4;
 }
 
 section header .total-income p,
@@ -205,9 +206,9 @@ section .form-container .form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -230,6 +231,8 @@ section .form-container .form-wrapper form .form-field input {
   width: 100%;
   margin-top: 0.7rem;
   padding: 7px;
+  border: 1px solid #1565c0;
+  outline-color: red;
 }
 
 section .form-container .form-wrapper form .submit-btn {
@@ -243,6 +246,17 @@ section .form-container .form-wrapper form .submit-btn {
 
 section .form-container .form-wrapper form .submit-btn input {
   margin-top: 2rem;
-  padding: 5px 15px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+section .form-container .form-wrapper form .submit-btn input:hover {
+  background-color: #1565c0;
 }
 /*# sourceMappingURL=style.css.map */

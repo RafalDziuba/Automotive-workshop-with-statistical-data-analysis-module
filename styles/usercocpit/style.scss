@@ -1,3 +1,5 @@
+@import '../colors';
+  
   * {
       margin: 0;
       padding: 0;
@@ -8,96 +10,96 @@
 
   body {
       height: 200vh;
-      background-color: rgb(225, 225, 228);
+      background-color: $mainColor;
       display: flex;
 
   }
 
- nav {
- 
-      height: 100%;
-      width: 20%;
-      background-color: rgb(201, 203, 204);
-      position: fixed;
-      box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
+  nav {
 
-      .nav-header {
-          height: 8%;
-          width: 100%;
-          background-color: #b1b1b1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+    height: 100%;
+    width: 20%;
+    background-color: $secondColor;
+    position: fixed;
+    box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
 
-          p {
-              font-size: 3rem;
-              color: rgb(156, 44, 44);
-              font-weight: bold;
-          }
-      }
+    .nav-header {
+        height: 8%;
+        width: 100%;
+        background-color: $primaryColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-      .nav-list {
-          height: 85%;
-      }
+        p {
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+        }
+    }
 
-      .nav-list-element {
-          height: 6%;
-          width: 100%;
-          margin-top: 5%;
-          //   border-bottom: 1px solid black;
-          display: flex;
-          align-items: center;
+    .nav-list {
+        height: 85%;
+    }
 
-
-          a {
-              margin-left: 12%;
-              font-size: 2rem;
-              cursor: pointer;
-              text-decoration: none;
-              color: rgb(39, 39, 39);
-              transition: margin 0.2s;
-              display: flex;
-              align-items: center;
-
-              i {
-                  margin-right: 5px;
-                  font-size: 2.3rem;
-
-              }
-          }
-
-          a:hover {
-              color: rgb(156, 44, 44);
-              margin-left: 15%;
-          }
+    .nav-list-element {
+        height: 6%;
+        width: 100%;
+        margin-top: 5%;
+        //   border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
 
 
-      }
+        a {
+            margin-left: 12%;
+            font-size: 2rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            transition: margin 0.2s;
+            display: flex;
+            align-items: center;
 
-      .nav-logout {
-          display: flex;
-          align-items: center;
+            i {
+                margin-right: 5px;
+                font-size: 2.3rem;
 
-          a {
-              text-decoration: none;
-              color: rgb(206, 6, 6);
-              font-size: 2rem;
-              margin-left: 12%;
-              transition: margin 0.2s;
+            }
+        }
 
-              i {
-                  font-size: 2.3rem;
-                  margin-right: 5px;
-              }
-          }
+        a:hover {
+            text-shadow: rgba(255,255,255,0.9) 0px 0px 8px;
+            margin-left: 15%;
+        }
 
-          a:hover {
-              color: rgb(156, 44, 44);
-              margin-left: 15%;
-          }
-      }
-  }
+
+    }
+
+    .nav-logout {
+        display: flex;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            margin-left: 12%;
+            transition: margin 0.2s;
+
+            i {
+                font-size: 2.3rem;
+                margin-right: 5px;
+            }
+        }
+
+        a:hover {
+            text-shadow: rgba(255,255,255,0.9) 0px 0px 8px;
+            margin-left: 15%;
+        }
+    }
+}
 
   section {
       width: 80%;
@@ -108,7 +110,6 @@
       header {
           height: 20vh;
           width: 100%;
-          background-color: aliceblue;
           display: flex;
           flex-direction: row;
 
@@ -119,10 +120,11 @@
               height: 100%;
               display: flex;
               align-items: center;
-              background-color: rgb(204, 177, 57);
+              background-color: $hoverColor;
 
               p {
                   margin-left: 15%;
+                  color: rgb(211, 22, 164);
               }
 
               p,
@@ -137,10 +139,11 @@
               height: 100%;
               display: flex;
               align-items: center;
-              background-color: rgb(123, 226, 92);
+              background-color: #b6d6fa;
 
               p {
                   margin-left: 15%;
+                  color: rgb(211, 22, 164);
               }
 
               p,
@@ -163,7 +166,7 @@
               width: 60%;
               height: 80%;
               display: flex;
-              justify-content: center;
+              justify-content: flex-start;
               align-items: flex-start;
 
               form {
@@ -181,6 +184,8 @@
                           width: 100%;
                           margin-top: 0.7rem;
                           padding: 7px;
+                          border: 1px solid $secondColor;
+                          outline-color: red;
                       }
                   }
 
@@ -190,7 +195,17 @@
 
                       input {
                           margin-top: 2rem;
-                          padding: 5px 15px;
+                          padding: 10px 20px;
+                          font-size: 1.3rem;
+                          cursor: pointer;
+                          border: none;
+                          background-color: $primaryColor;
+                          color: white;
+                          transition: background-color 0.2s;
+                      }
+
+                      input:hover {
+                          background-color: $secondColor;
                       }
                   }
               }
