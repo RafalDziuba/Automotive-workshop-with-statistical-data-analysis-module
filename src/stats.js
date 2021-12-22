@@ -91,7 +91,7 @@ const showOrders = () => {
 
             const deleteOrderBtn = document.querySelectorAll('.delete-btn');
 
-            for (i = 0; i < deleteOrderBtn.length; i++) {
+            for (let i = 0; i < deleteOrderBtn.length; i++) {
                 deleteOrderBtn[i].addEventListener('click', () => {
                     const cancelPopup = document.createElement('div');
                     const cancelText = document.createElement('p');
@@ -117,8 +117,29 @@ const showOrders = () => {
                         section.removeChild(cancelPopup);
                     }
 
+
                     cancelButtonDecline.addEventListener('click', removePopup);
-                    // cancelButtonDecline.addEventListener('click', section.removeChild(cancelPopup));
+
+                    cancelButtonConfirm.addEventListener('click', () => {
+                        let orderId = res.data[i].id
+                        console.log(orderId)
+                        const api_link = 'https://car-service-api-app.herokuapp.com/repairs/'
+                        const api_parameter = '\?BYPASS_AUTHENTICATION\=true'
+                        const url = api_link + orderId;
+
+                        fetch(url, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': 'Bearer 7c633011915c7421d857353aa01a9fa1'
+                                }
+
+
+                            })
+                            .then(() => location.reload());
+
+                    })
+
                 })
             }
 
