@@ -2,7 +2,15 @@ const total_orders = document.getElementById('total_orders');
 const total_income = document.getElementById('total_income');
 
 const showInfo = () => {
-    axios.get('https://car-service-api-app.herokuapp.com/repairs')
+    axios({
+        method: 'get',
+        url: 'https://car-service-api-app.herokuapp.com/repairs',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+    }
+    )
         .then((res) => {
             total_orders.textContent = res.data.length;
 

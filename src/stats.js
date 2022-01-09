@@ -5,7 +5,12 @@ const pageNumbers = document.getElementById('pagination');
 
 
 const showOrders = () => {
-    axios.get('https://car-service-api-app.herokuapp.com/repairs\?BYPASS_AUTHENTICATION\=true')
+    axios.get('https://car-service-api-app.herokuapp.com/repairs', {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+        }
+    })
         .then((res) => {
 
             console.log(res.data)
@@ -136,7 +141,7 @@ const showOrders = () => {
 
 
                             })
-                            .then(() => location.reload());
+                            // .then(() => location.reload());
 
                     })
 

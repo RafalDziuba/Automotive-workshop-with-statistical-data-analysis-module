@@ -1,12 +1,17 @@
-const showCars = () => {
-    axios.get('https://car-service-api-app.herokuapp.com/repairs')
-        .then(function (res) {
-            console.log(res);
-        })
-        .catch(function (error) {
-            console.log(error)
-        });
-};
+// const showCars = () => {
+//     axios.get('https://car-service-api-app.herokuapp.com/repairs', {
+//         headers: {
+//             'Content-Type': 'application/json',
+//             Authorization: 'Bearer' + localStorage.getItem('token')
+//         }
+//     })
+//         .then(function (res) {
+//             console.log(res);
+//         })
+//         .catch(function (error) {
+//             console.log(error)
+//         });
+// };
 
 const form = document.getElementById('carForm');
 
@@ -50,7 +55,8 @@ axios({
             repair
             },
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
         },
     })
     .then(function (response) {
