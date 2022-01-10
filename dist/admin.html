@@ -19,8 +19,7 @@
         <div class="nav-list">
             <div class="nav-list-element"><a href=""><i class="fas fa-home"></i>Home</a></div>
             <div class="nav-list-element"><a href="/dist/stats.html"><i class="fas fa-chart-line"></i>Statistics</a></div>
-            <div class="nav-list-element"><a href="/dist/stats.html"><i class="fas fa-tasks"></i>Orders</a></div>
-            <div class="nav-list-element"><a href=""><i class="fas fa-users-cog"></i>Settings</a></div>
+            <div class="nav-list-element"><a href="/dist/orders.html"><i class="fas fa-tasks"></i>Orders</a></div>
         </div>
         <div class="nav-logout"><a id="logout-btn" href=""><i class="fas fa-sign-out-alt"></i>Log out</a></div>
     </nav>
@@ -56,45 +55,47 @@
 
                     <div class="form-field">
                         <label for="">Maintenance:</label><br>
-                        <input id="maintenance" type="number" placeholder="0000" >
+                        <input id="maintenance" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
                         <label for="">Cooling system:</label><br>
-                        <input id="cooling" type="number" placeholder="0000" >
+                        <input id="cooling" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
                         <label for="">Exhaust system:</label><br>
-                        <input id="exhaust" type="number" placeholder="0000" >
+                        <input id="exhaust" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
                         <label for="">Brake system:</label><br>
-                        <input id="brake" type="number" placeholder="0000" >
+                        <input id="brake" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
                         <label for="">Electrical system:</label><br>
-                        <input id="electrical" type="number" placeholder="0000" >
+                        <input id="electrical" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
                         <label for="">Engine:</label><br>
-                        <input id="engine" type="number" placeholder="0000" >
+                        <input id="engine" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
                         <label for="">Body:</label><br>
-                        <input id="body" type="number" placeholder="0000" >
+                        <input id="body" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
                         <label for="">Suspension:</label><br>
-                        <input id="suspension" type="number" placeholder="0000" >
+                        <input id="suspension" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
                         <label for="">Total amount:</label><br>
-                        <input id="total" type="number" placeholder="0000" required>
+                        <input id="total" class="for-summary" type="number" placeholder="0000"  required> 
+                        
                     </div>
 
                     <div class="submit-btn">
                         <input type="submit" value="Add">
                     </div>
                 </form>
+                <button id="total-sum">Sum total</button>
             </div>
 
         </div>

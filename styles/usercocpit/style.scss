@@ -168,9 +168,13 @@
               display: flex;
               justify-content: flex-start;
               align-items: flex-start;
-
+              flex-direction: column;
+#total-sum {
+    padding: 1rem 1.3rem;
+    font-size: 1.3rem;
+}
               form {
-                  width: 50%;
+                  width: 60%;
 
                   .form-field {
                       margin-top: 2rem;

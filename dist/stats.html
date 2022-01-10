@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/stats/stats.css">
+
     <script src="https://kit.fontawesome.com/fff128d8fd.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles/stats/stats.css">
 </head>
 
 <body>
@@ -16,86 +20,138 @@
             <p>Welcome</p>
         </div>
         <div class="nav-list">
-            <div class="nav-list-element"><a href="../dist/admin.html"><i class="fas fa-home"></i>Home</a></div>
-            <div class="nav-list-element"><a href=""><i class="fas fa-chart-line"></i>Statistics</a></div>
-            <div class="nav-list-element"><a href=""><i class="fas fa-tasks"></i>Orders</a></div>
-            <div class="nav-list-element"><a href=""><i class="fas fa-users-cog"></i>Settings</a></div>
+            <div class="nav-list-element"><a href="/dist/admin.html"><i class="fas fa-home"></i>Home</a></div>
+            <div class="nav-list-element"><a href="/dist/stats.html"><i class="fas fa-chart-line"></i>Statistics</a>
+            </div>
+            <div class="nav-list-element"><a href="/dist/orders.html"><i class="fas fa-tasks"></i>Orders</a></div>
         </div>
         <div class="nav-logout"><a id="logout-btn" href=""><i class="fas fa-sign-out-alt"></i>Log out</a></div>
     </nav>
 
     <section>
+        <div class="stats-container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Audi</th>
+                        <th scope="col">BMW</th>
+                        <th scope="col">Citroen</th>
+                        <th scope="col">Fiat</th>
+                        <th scope="col">Honda</th>
+                        <th scope="col">Nissan</th>
+                        <th scope="col">Opel</th>
+                        <th scope="col">Toyota</th>
+                    </tr>
 
-        <div class="orders-container">
-            <!-- <div class="order">
-                <div class="order-menu-container"><button class="delete-btn"><i class="fas fa-trash"></i></button></div>
-                <div class="brand-info order-basic-style">
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Maintenance</th>
+                        <td id="audi-maintenance">mA</td>
+                        <td id="bmw-maintenance">mB</td>
+                        <td id="citroen-maintenance">price</td>
+                        <td id="fiat-maintenance">price</td>
+                        <td id="honda-maintenance">price</td>
+                        <td id="nissan-maintenance">price</td>
+                        <td id="opel-maintenance">price</td>
+                        <td id="toyota-maintenance">price</td>
 
-                    <span class="brand">Brand</span>
-                </div>
-                <div class="price-info order-basic-style">
-                    <span class="price">Cena</span>
-                </div>
-                <div class="date-info order-basic-style">
-                    <span class="date">data</span>
-                </div>
-            </div> -->
-        </div> 
-
-
-        <!-- <div class="cancel-btn-popup">
-            <p>Are you sure?</p>
-            <button class="cancel-btn-decline">Cancel</button>
-            <button class="cancel-btn-confirm">Delete</button>
-        </div> -->
-
-
-        <div class="pagenumbers" id="pagination"></div>
-        <!-- <a href="javascript:prevPage()" id="btn_prev">Prev</a>
-        <a href="javascript:nextPage()" id="btn_next">Next</a>
-        page: <span id="page"></span> -->
-        <!-- <div class="order-popup">
-            <div class="menu"><p>X</p></div>
-            <p class="popup-info"></p>
-        </div> -->
-        <!-- <div class="order-popup">
-            <div class="popup-menu">
-                <div class="close-btn"><button class="close">x</button></div>
-            </div>
-             <div class="orders-info-container"> -->
-        <!-- <div class="popup-orders-info">
-                    <p>aaaaaaaaa</p>
-                    <p class="popup-price">10000</p>
-                </div>
-                <div class="popup-orders-info">
-                    <p class="popup-info">bbbbbbbb</p>
-                </div>
-                <div class="popup-orders-info">
-                    <p class="popup-info">cccccccc</p>
-                </div>
-                <div class="popup-orders-info">
-                    <p class="popup-info">dddddddddd</p>
-                </div>
-                <div class="popup-orders-info">
-                    <p class="popup-info">eeeeeeeee</p>
-                </div>
-                <div class="popup-orders-info">
-                    <p class="popup-info">fffffffff</p>
-                </div>
-                <div class="popup-orders-info">
-                    <p class="popup-info">ggggggggg</p>
-                </div>
-                <div class="popup-orders-info">
-                    <p class="popup-info">hhhhhhhhh</p>
-                </div>
-            </div> 
-        </div> -->
-
+                    </tr>
+                    <tr>
+                        <th scope="row">Cooling system</th>
+                        <td id="audi-cooling-system">csA</td>
+                        <td id="bmw-cooling-system">csB</td>
+                        <td id="citroen-cooling-system">price</td>
+                        <td id="fiat-cooling-system">price</td>
+                        <td id="honda-cooling-system">price</td>
+                        <td id="nissan-cooling-system">price</td>
+                        <td id="opel-cooling-system">price</td>
+                        <td id="toyota-cooling-system">price</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Exhaust system</th>
+                        <td id="audi-exhaust-system">price</td>
+                        <td id="bmw-exhaust-system">price</td>
+                        <td id="citroen-exhaust-system">price</td>
+                        <td id="fiat-exhaust-system">price</td>
+                        <td id="honda-exhaust-system">price</td>
+                        <td id="nissan-exhaust-system">price</td>
+                        <td id="opel-exhaust-system">price</td>
+                        <td id="toyota-exhaust-system">price</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Brake system</th>
+                        <td id="audi-brake-system">price</td>
+                        <td id="bmw-brake-system">price</td>
+                        <td id="citroen-brake-system">price</td>
+                        <td id="fiat-brake-system">price</td>
+                        <td id="honda-brake-system">price</td>
+                        <td id="nissan-brake-system">price</td>
+                        <td id="opel-brake-system">price</td>
+                        <td id="toyota-brake-system">price</td>
+                    </tr>
+                    <th scope="row">Electrical system</th>
+                    <td id="audi-electrical-system">price</td>
+                    <td id="bmw-electrical-system">price</td>
+                    <td id="citroen-electrical-system">price</td>
+                    <td id="fiat-electrical-system">price</td>
+                    <td id="honda-electrical-system">price</td>
+                    <td id="nissan-electrical-system">price</td>
+                    <td id="opel-electrical-system">price</td>
+                    <td id="toyota-electrical-system">price</td>
+                    </tr>
+                    <th scope="row">Engine</th>
+                    <td id="audi-engine">price</td>
+                    <td id="bmw-engine">price</td>
+                    <td id="citroen-engine">price</td>
+                    <td id="fiat-engine">price</td>
+                    <td id="honda-engine">price</td>
+                    <td id="nissan-engine">price</td>
+                    <td id="opel-engine">price</td>
+                    <td id="toyota-engine">price</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Body</th>
+                        <td id="audi-body">price</td>
+                        <td id="bmw-body">price</td>
+                        <td id="citroen-body">price</td>
+                        <td id="fiat-body">price</td>
+                        <td id="honda-body">price</td>
+                        <td id="nissan-body">price</td>
+                        <td id="opel-body">price</td>
+                        <td id="toyota-body">price</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Suspension</th>
+                        <td id="audi-suspension">price</td>
+                        <td id="bmw-suspension">price</td>
+                        <td id="citroen-suspension">price</td>
+                        <td id="fiat-suspension">price</td>
+                        <td id="honda-suspension">price</td>
+                        <td id="nissan-suspension">price</td>
+                        <td id="opel-suspension">price</td>
+                        <td id="toyota-suspension">price</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td id="audi-total">price</td>
+                        <td id="bmw-total">price</td>
+                        <td id="citroen-total">price</td>
+                        <td id="fiat-total">price</td>
+                        <td id="honda-total">price</td>
+                        <td id="nissan-total">price</td>
+                        <td id="opel-total">price</td>
+                        <td id="toyota-total">price</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="../src/stats.js"></script>
-    <script src="../src/logout.js"></script>
     <script src="../src/auth.js"></script>
+    <script src="../src/stats.js"></script>
 </body>
 
 </html>

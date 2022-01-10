@@ -212,10 +212,19 @@ section .form-container .form-wrapper {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .form-container .form-wrapper #total-sum {
+  padding: 1rem 1.3rem;
+  font-size: 1.3rem;
 }
 
 section .form-container .form-wrapper form {
-  width: 50%;
+  width: 60%;
 }
 
 section .form-container .form-wrapper form .form-field {
