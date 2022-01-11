@@ -18,14 +18,14 @@ const totalField = document.getElementById('total');
 const yearField = document.getElementById('year');
 const mileageField = document.getElementById('mileage');
 const brandField = document.getElementById('brand');
-const maintenanceField = document.getElementById('maintenance').value;
-const coolingField = document.getElementById('cooling').value;
-const exhaustField = document.getElementById('exhaust').value;
-const brakeField = document.getElementById('brake').value;
-const electricalField = document.getElementById('electrical').value;
-const engineField = document.getElementById('engine').value;
-const bodyField = document.getElementById('body').value;
-const suspensionField = document.getElementById('suspension').value;
+// const maintenanceField = document.getElementById('maintenance').value;
+// const coolingField = document.getElementById('cooling').value;
+// const exhaustField = document.getElementById('exhaust').value;
+// const brakeField = document.getElementById('brake').value;
+// const electricalField = document.getElementById('electrical').value;
+// const engineField = document.getElementById('engine').value;
+// const bodyField = document.getElementById('body').value;
+// const suspensionField = document.getElementById('suspension').value;
 
 const autoSummaryBtn = document.getElementById('total-sum');
 
@@ -52,18 +52,18 @@ const sentForm = (e) => {
 
     e.preventDefault();
 
-    // const totalField = document.getElementById('total');
-    // const yearField = document.getElementById('year');
-    // const mileageField = document.getElementById('mileage');
-    // const brandField = document.getElementById('brand');
-    // const maintenanceField = document.getElementById('maintenance').value;
-    // const coolingField = document.getElementById('cooling').value;
-    // const exhaustField = document.getElementById('exhaust').value;
-    // const brakeField = document.getElementById('brake').value;
-    // const electricalField = document.getElementById('electrical').value;
-    // const engineField = document.getElementById('engine').value;
-    // const bodyField = document.getElementById('body').value;
-    // const suspensionField = document.getElementById('suspension').value;
+    const totalField = document.getElementById('total');
+    const yearField = document.getElementById('year');
+    const mileageField = document.getElementById('mileage');
+    const brandField = document.getElementById('brand');
+    const maintenanceField = document.getElementById('maintenance').value;
+    const coolingField = document.getElementById('cooling').value;
+    const exhaustField = document.getElementById('exhaust').value;
+    const brakeField = document.getElementById('brake').value;
+    const electricalField = document.getElementById('electrical').value;
+    const engineField = document.getElementById('engine').value;
+    const bodyField = document.getElementById('body').value;
+    const suspensionField = document.getElementById('suspension').value;
 
     const repair = {
         year: yearField.value,
