@@ -141,7 +141,7 @@ const showOrders = () => {
 
 
                             })
-                            // .then(() => location.reload());
+                            .then(() => setTimeout(window.location.reload.bind(window.location), 250));
 
                     })
 

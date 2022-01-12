@@ -25,10 +25,10 @@ const showStats = () => {
             mAudiValue.textContent = resp.data.maintenance.Audi;
         };
 
-        if (resp.data.maintenance.BMW === undefined) {
+        if (resp.data.maintenance.Bmw === undefined) {
             mBmwValue.textContent = 0
         } else {
-            mBmwValue.textContent = resp.data.maintenance.Audi;
+            mBmwValue.textContent = resp.data.maintenance.Bmw;
         };
 
         if (resp.data.maintenance.Citroen === undefined) {
@@ -81,13 +81,13 @@ const showStats = () => {
         if (resp.data.cooling_system.Audi === undefined) {
             csAudiValue.textContent = 0
         } else {
-            csAudiValue.textContent = resp.cooling_system.Audi;
+            csAudiValue.textContent = resp.data.cooling_system.Audi;
         };
 
-        if (resp.data.cooling_system.BMW === undefined) {
+        if (resp.data.cooling_system.Bmw === undefined) {
             csBmwValue.textContent = 0
         } else {
-            csBmwValue.textContent = resp.data.cooling_system.BMW;
+            csBmwValue.textContent = resp.data.cooling_system.Bmw;
         };
 
         if (resp.data.cooling_system.Citroen === undefined) {
@@ -144,10 +144,10 @@ const showStats = () => {
             exsAudiValue.textContent = resp.data.exhaust_system.Audi;
         };
 
-        if (resp.data.exhaust_system.BMW === undefined) {
+        if (resp.data.exhaust_system.Bmw === undefined) {
             exsBmwValue.textContent = 0
         } else {
-            exsBmwValue.textContent = resp.data.exhaust_system.BMW;
+            exsBmwValue.textContent = resp.data.exhaust_system.Bmw;
         };
 
         if (resp.data.exhaust_system.Citroen === undefined) {
@@ -203,10 +203,10 @@ const showStats = () => {
             bsAudiValue.textContent = resp.data.brake_system.Audi;
         };
 
-        if (resp.data.brake_system.BMW === undefined) {
+        if (resp.data.brake_system.Bmw === undefined) {
             bsBmwValue.textContent = 0
         } else {
-            bsBmwValue.textContent = resp.data.brake_system.BMW;
+            bsBmwValue.textContent = resp.data.brake_system.Bmw;
         };
 
         if (resp.data.brake_system.Citroen === undefined) {
@@ -263,10 +263,10 @@ const showStats = () => {
             elsAudiValue.textContent = resp.data.electrical_system.Audi;
         };
 
-        if (resp.data.electrical_system.BMW === undefined) {
+        if (resp.data.electrical_system.Bmw === undefined) {
             elsBmwValue.textContent = 0
         } else {
-            elsBmwValue.textContent = resp.data.electrical_system.BMW;
+            elsBmwValue.textContent = resp.data.electrical_system.Bmw;
         };
 
         if (resp.data.electrical_system.Citroen === undefined) {
@@ -321,22 +321,16 @@ const showStats = () => {
             engineAudiValue.textContent = resp.data.engine.Audi;
         };
 
-        if (resp.data.engine.BMW === undefined) {
+        if (resp.data.engine.Bmw === undefined) {
             engineBmwValue.textContent = 0
         } else {
-            engineBmwValue.textContent = resp.data.engine.BMW;
+            engineBmwValue.textContent = resp.data.engine.Bmw;
         };
 
         if (resp.data.engine.Citroen === undefined) {
             engineCitroenValue.textContent = 0
         } else {
             engineCitroenValue.textContent = resp.data.engine.Citroen;
-        };
-
-        if (resp.data.engine.Fiat === undefined) {
-            engineFiatValue.textContent = 0
-        } else {
-            engineFiatValue.textContent = resp.data.engine.Fiat;
         };
 
         if (resp.data.engine.Fiat === undefined) {
@@ -385,10 +379,10 @@ const showStats = () => {
             bodyAudiValue.textContent = resp.data.body.Audi;
         };
 
-        if (resp.data.body.BMW === undefined) {
+        if (resp.data.body.Bmw === undefined) {
             bodyBmwValue.textContent = 0
         } else {
-            bodyBmwValue.textContent = resp.data.body.BMW;
+            bodyBmwValue.textContent = resp.data.body.Bmw;
         };
 
         if (resp.data.body.Citroen === undefined) {
@@ -443,10 +437,10 @@ const showStats = () => {
             susAudiValue.textContent = resp.data.suspension.Audi;
         };
 
-        if (resp.data.suspension.BMW === undefined) {
+        if (resp.data.suspension.Bmw === undefined) {
             susBmwValue.textContent = 0
         } else {
-            susBmwValue.textContent = resp.data.suspension.BMW;
+            susBmwValue.textContent = resp.data.suspension.Bmw;
         };
 
         if (resp.data.suspension.Citroen === undefined) {
@@ -496,18 +490,192 @@ const showStats = () => {
         const totalOpelValue = document.getElementById('opel-total');
         const totalToyotaValue = document.getElementById('toyota-total');
 
-        totalAudiValue.textContent = parseInt(mAudiValue.textContent) + parseInt(csAudiValue.textContent) + parseInt(exsAudiValue.textContent) + parseInt(bsAudiValue.textContent) + parseInt(elsAudiValue.textContent) + parseInt(engineAudiValue.textContent) + parseInt(bodyAudiValue.textContent) + parseInt(susAudiValue.textContent);
-        totalBmwValue.textContent = parseInt(mBmwValue.textContent) + parseInt(csBmwValue.textContent) + parseInt(exsBmwValue.textContent) + parseInt(bsBmwValue.textContent) + parseInt(elsBmwValue.textContent) + parseInt(engineBmwValue.textContent) + parseInt(bodyBmwValue.textContent) + parseInt(susBmwValue.textContent);
-        totalCitroenValue.textContent = parseInt(mCitroenValue.textContent) + parseInt(csCitroenValue.textContent) + parseInt(exsCitroenValue.textContent) + parseInt(bsCitroenValue.textContent) + parseInt(elsCitroenValue.textContent) + parseInt(engineCitroenValue.textContent) + parseInt(bodyCitroenValue.textContent) + parseInt(susCitroenValue.textContent);
-        totalFiatValue.textContent = parseInt(mFiatValue.textContent) + parseInt(csFiatValue.textContent) + parseInt(exsFiatValue.textContent) + parseInt(bsFiatValue.textContent) + parseInt(elsFiatValue.textContent) + parseInt(engineFiatValue.textContent) + parseInt(bodyFiatValue.textContent) + parseInt(susFiatValue.textContent);
-        totalHondaValue.textContent = parseInt(mHondaValue.textContent) + parseInt(csHondaValue.textContent) + parseInt(exsHondaValue.textContent) + parseInt(bsHondaValue.textContent) + parseInt(elsHondaValue.textContent) + parseInt(engineHondaValue.textContent) + parseInt(bodyHondaValue.textContent) + parseInt(susHondaValue.textContent);
-        totalNissanValue.textContent = parseInt(mNissanValue.textContent) + parseInt(csNissanValue.textContent) + parseInt(exsNissanValue.textContent) + parseInt(bsNissanValue.textContent) + parseInt(elsNissanValue.textContent) + parseInt(engineNissanValue.textContent) + parseInt(bodyNissanValue.textContent) + parseInt(susNissanValue.textContent);
-        totalOpelValue.textContent = parseInt(mOpelValue.textContent) + parseInt(csOpelValue.textContent) + parseInt(exsOpelValue.textContent) + parseInt(bsOpelValue.textContent) + parseInt(elsOpelValue.textContent) + parseInt(engineOpelValue.textContent) + parseInt(bodyOpelValue.textContent) + parseInt(susOpelValue.textContent);
-        totalToyotaValue.textContent = parseInt(mToyotaValue.textContent) + parseInt(csToyotaValue.textContent) + parseInt(exsToyotaValue.textContent) + parseInt(bsToyotaValue.textContent) + parseInt(elsToyotaValue.textContent) + parseInt(engineToyotaValue.textContent) + parseInt(bodyToyotaValue.textContent) + parseInt(susToyotaValue.textContent);
+        let allAudiRepairs = parseInt(mAudiValue.textContent) + parseInt(csAudiValue.textContent) + parseInt(exsAudiValue.textContent) + parseInt(bsAudiValue.textContent) + parseInt(elsAudiValue.textContent) + parseInt(engineAudiValue.textContent) + parseInt(bodyAudiValue.textContent) + parseInt(susAudiValue.textContent);
+        let allBmwRepairs = parseInt(mBmwValue.textContent) + parseInt(csBmwValue.textContent) + parseInt(exsBmwValue.textContent) + parseInt(bsBmwValue.textContent) + parseInt(elsBmwValue.textContent) + parseInt(engineBmwValue.textContent) + parseInt(bodyBmwValue.textContent) + parseInt(susBmwValue.textContent);
+        let allCitroenRepairs = parseInt(mCitroenValue.textContent) + parseInt(csCitroenValue.textContent) + parseInt(exsCitroenValue.textContent) + parseInt(bsCitroenValue.textContent) + parseInt(elsCitroenValue.textContent) + parseInt(engineCitroenValue.textContent) + parseInt(bodyCitroenValue.textContent) + parseInt(susCitroenValue.textContent);
+        let allFiatRepairs = parseInt(mFiatValue.textContent) + parseInt(csFiatValue.textContent) + parseInt(exsFiatValue.textContent) + parseInt(bsFiatValue.textContent) + parseInt(elsFiatValue.textContent) + parseInt(engineFiatValue.textContent) + parseInt(bodyFiatValue.textContent) + parseInt(susFiatValue.textContent);
+        let allHondaRepairs = parseInt(mHondaValue.textContent) + parseInt(csHondaValue.textContent) + parseInt(exsHondaValue.textContent) + parseInt(bsHondaValue.textContent) + parseInt(elsHondaValue.textContent) + parseInt(engineHondaValue.textContent) + parseInt(bodyHondaValue.textContent) + parseInt(susHondaValue.textContent);
+        let allNissanRepairs = parseInt(mNissanValue.textContent) + parseInt(csNissanValue.textContent) + parseInt(exsNissanValue.textContent) + parseInt(bsNissanValue.textContent) + parseInt(elsNissanValue.textContent) + parseInt(engineNissanValue.textContent) + parseInt(bodyNissanValue.textContent) + parseInt(susNissanValue.textContent);
+        let allOpelRepairs = parseInt(mOpelValue.textContent) + parseInt(csOpelValue.textContent) + parseInt(exsOpelValue.textContent) + parseInt(bsOpelValue.textContent) + parseInt(elsOpelValue.textContent) + parseInt(engineOpelValue.textContent) + parseInt(bodyOpelValue.textContent) + parseInt(susOpelValue.textContent);
+        let allToyotaRepairs = parseInt(mToyotaValue.textContent) + parseInt(csToyotaValue.textContent) + parseInt(exsToyotaValue.textContent) + parseInt(bsToyotaValue.textContent) + parseInt(elsToyotaValue.textContent) + parseInt(engineToyotaValue.textContent) + parseInt(bodyToyotaValue.textContent) + parseInt(susToyotaValue.textContent);
 
+        const r1c1 = document.getElementById('r1c1');
+        const r1c2 = document.getElementById('r1c2');
+        const r1c3 = document.getElementById('r1c3');
+        const r1c4 = document.getElementById('r1c4');
+        const r1c5 = document.getElementById('r1c5');
+        const r1c6 = document.getElementById('r1c6');
+        const r1c7 = document.getElementById('r1c7');
+        const r1c8 = document.getElementById('r1c8');
+
+        const r2c1 = document.getElementById('r2c1');
+        const r2c2 = document.getElementById('r2c2');
+        const r2c3 = document.getElementById('r2c3');
+        const r2c4 = document.getElementById('r2c4');
+        const r2c5 = document.getElementById('r2c5');
+        const r2c6 = document.getElementById('r2c6');
+        const r2c7 = document.getElementById('r2c7');
+        const r2c8 = document.getElementById('r2c8');
+
+        const r3c1 = document.getElementById('r3c1');
+        const r3c2 = document.getElementById('r3c2');
+        const r3c3 = document.getElementById('r3c3');
+        const r3c4 = document.getElementById('r3c4');
+        const r3c5 = document.getElementById('r3c5');
+        const r3c6 = document.getElementById('r3c6');
+        const r3c7 = document.getElementById('r3c7');
+        const r3c8 = document.getElementById('r3c8');
+
+        const r4c1 = document.getElementById('r4c1');
+        const r4c2 = document.getElementById('r4c2');
+        const r4c3 = document.getElementById('r4c3');
+        const r4c4 = document.getElementById('r4c4');
+        const r4c5 = document.getElementById('r4c5');
+        const r4c6 = document.getElementById('r4c6');
+        const r4c7 = document.getElementById('r4c7');
+        const r4c8 = document.getElementById('r4c8');
+
+        const r5c1 = document.getElementById('r5c1');
+        const r5c2 = document.getElementById('r5c2');
+        const r5c3 = document.getElementById('r5c3');
+        const r5c4 = document.getElementById('r5c4');
+        const r5c5 = document.getElementById('r5c5');
+        const r5c6 = document.getElementById('r5c6');
+        const r5c7 = document.getElementById('r5c7');
+        const r5c8 = document.getElementById('r5c8');
+
+        const r6c1 = document.getElementById('r6c1');
+        const r6c2 = document.getElementById('r6c2');
+        const r6c3 = document.getElementById('r6c3');
+        const r6c4 = document.getElementById('r6c4');
+        const r6c5 = document.getElementById('r6c5');
+        const r6c6 = document.getElementById('r6c6');
+        const r6c7 = document.getElementById('r6c7');
+        const r6c8 = document.getElementById('r6c8');
+
+        const r7c1 = document.getElementById('r7c1');
+        const r7c2 = document.getElementById('r7c2');
+        const r7c3 = document.getElementById('r7c3');
+        const r7c4 = document.getElementById('r7c4');
+        const r7c5 = document.getElementById('r7c5');
+        const r7c6 = document.getElementById('r7c6');
+        const r7c7 = document.getElementById('r7c7');
+        const r7c8 = document.getElementById('r7c8');
+
+        const r8c1 = document.getElementById('r8c1');
+        const r8c2 = document.getElementById('r8c2');
+        const r8c3 = document.getElementById('r8c3');
+        const r8c4 = document.getElementById('r8c4');
+        const r8c5 = document.getElementById('r8c5');
+        const r8c6 = document.getElementById('r8c6');
+        const r8c7 = document.getElementById('r8c7');
+        const r8c8 = document.getElementById('r8c8');
+
+        const r9c1 = document.getElementById('r9c1');
+        const r9c2 = document.getElementById('r9c2');
+        const r9c3 = document.getElementById('r9c3');
+        const r9c4 = document.getElementById('r9c4');
+        const r9c5 = document.getElementById('r9c5');
+        const r9c6 = document.getElementById('r9c6');
+        const r9c7 = document.getElementById('r9c7');
+        const r9c8 = document.getElementById('r9c8');
+
+        let allMaintenanceValue = parseInt(mAudiValue.textContent) + parseInt(mBmwValue.textContent) + parseInt(mCitroenValue.textContent) + parseInt(mFiatValue.textContent) + parseInt(mHondaValue.textContent) + parseInt(mNissanValue.textContent) + parseInt(mOpelValue.textContent) + parseInt(mToyotaValue.textContent);
+        let allCsystemValue = parseInt(csAudiValue.textContent) + parseInt(csBmwValue.textContent) + parseInt(csCitroenValue.textContent) + parseInt(csFiatValue.textContent) + parseInt(csHondaValue.textContent) + parseInt(csNissanValue.textContent) + parseInt(csOpelValue.textContent) + parseInt(csToyotaValue.textContent);
+        let allExsValue = parseInt(exsAudiValue.textContent) + parseInt(exsBmwValue.textContent) + parseInt(exsCitroenValue.textContent) + parseInt(exsFiatValue.textContent) + parseInt(exsHondaValue.textContent) + parseInt(exsNissanValue.textContent) + parseInt(exsOpelValue.textContent) + parseInt(exsToyotaValue.textContent);
+        let allBsValue = parseInt(bsAudiValue.textContent) + parseInt(bsBmwValue.textContent) + parseInt(bsCitroenValue.textContent) + parseInt(bsFiatValue.textContent) + parseInt(bsHondaValue.textContent) + parseInt(bsNissanValue.textContent) + parseInt(bsOpelValue.textContent) + parseInt(bsToyotaValue.textContent);
+        let allElsValue = parseInt(elsAudiValue.textContent) + parseInt(elsBmwValue.textContent) + parseInt(elsCitroenValue.textContent) + parseInt(elsFiatValue.textContent) + parseInt(elsHondaValue.textContent) + parseInt(elsNissanValue.textContent) + parseInt(elsOpelValue.textContent) + parseInt(elsToyotaValue.textContent);
+        let allEngineValue = parseInt(engineAudiValue.textContent) + parseInt(engineBmwValue.textContent) + parseInt(engineCitroenValue.textContent) + parseInt(engineFiatValue.textContent) + parseInt(engineHondaValue.textContent) + parseInt(engineNissanValue.textContent) + parseInt(engineOpelValue.textContent) + parseInt(engineToyotaValue.textContent);
+        let allBodyValue = parseInt(bodyAudiValue.textContent) + parseInt(bodyBmwValue.textContent) + parseInt(engineCitroenValue.textContent) + parseInt(bodyFiatValue.textContent) + parseInt(bodyHondaValue.textContent) + parseInt(bodyNissanValue.textContent) + parseInt(bodyOpelValue.textContent) + parseInt(bodyToyotaValue.textContent);
+        let allSusValue = parseInt(susAudiValue.textContent) + parseInt(susBmwValue.textContent) + parseInt(susCitroenValue.textContent) + parseInt(susFiatValue.textContent) + parseInt(susHondaValue.textContent) + parseInt(susNissanValue.textContent) + parseInt(susOpelValue.textContent) + parseInt(susToyotaValue.textContent);
+
+        totalAudiValue.textContent = allAudiRepairs;
+        totalBmwValue.textContent = allBmwRepairs;
+        totalCitroenValue.textContent = allCitroenRepairs;
+        totalFiatValue.textContent = allFiatRepairs;
+        totalHondaValue.textContent = allHondaRepairs;
+        totalNissanValue.textContent = allNissanRepairs;
+        totalOpelValue.textContent = allOpelRepairs;
+        totalToyotaValue.textContent = allToyotaRepairs;
+
+        let allCelsValue = allAudiRepairs + allBmwRepairs + allCitroenRepairs + allFiatRepairs + allHondaRepairs + allNissanRepairs + allOpelRepairs + allToyotaRepairs;
+
+        console.log(allCelsValue)
+
+        r1c1.textContent = (allAudiRepairs * allMaintenanceValue) / allCelsValue;
+        r1c2.textContent = (allBmwRepairs * allMaintenanceValue) / allCelsValue;
+        r1c3.textContent = (allCitroenRepairs * allMaintenanceValue) / allCelsValue;
+        r1c4.textContent = (allFiatRepairs * allMaintenanceValue) / allCelsValue;
+        r1c5.textContent = (allHondaRepairs * allMaintenanceValue) / allCelsValue;
+        r1c6.textContent = (allNissanRepairs * allMaintenanceValue) / allCelsValue;
+        r1c7.textContent = (allOpelRepairs * allMaintenanceValue) / allCelsValue;
+        r1c8.textContent = (allToyotaRepairs * allMaintenanceValue) / allCelsValue;
+
+        r2c1.textContent = (allAudiRepairs * allCsystemValue) / allCelsValue;
+        r2c2.textContent = (allBmwRepairs * allCsystemValue) / allCelsValue;
+        r2c3.textContent = (allCitroenRepairs * allCsystemValue) / allCelsValue;
+        r2c4.textContent = (allFiatRepairs * allCsystemValue) / allCelsValue;
+        r2c5.textContent = (allHondaRepairs * allCsystemValue) / allCelsValue;
+        r2c6.textContent = (allNissanRepairs * allCsystemValue) / allCelsValue;
+        r2c7.textContent = (allOpelRepairs * allCsystemValue) / allCelsValue;
+        r2c8.textContent = (allToyotaRepairs * allCsystemValue) / allCelsValue;
+
+        r3c1.textContent = (allAudiRepairs * allExsValue) / allCelsValue;
+        r3c2.textContent = (allBmwRepairs * allExsValue) / allCelsValue;
+        r3c3.textContent = (allCitroenRepairs * allExsValue) / allCelsValue;
+        r3c4.textContent = (allFiatRepairs * allExsValue) / allCelsValue;
+        r3c5.textContent = (allHondaRepairs * allExsValue) / allCelsValue;
+        r3c6.textContent = (allNissanRepairs * allExsValue) / allCelsValue;
+        r3c7.textContent = (allOpelRepairs * allExsValue) / allCelsValue;
+        r3c8.textContent = (allToyotaRepairs * allExsValue) / allCelsValue;
+
+        r4c1.textContent = (allAudiRepairs * allBsValue) / allCelsValue;
+        r4c2.textContent = (allBmwRepairs * allBsValue) / allCelsValue;
+        r4c3.textContent = (allCitroenRepairs * allBsValue) / allCelsValue;
+        r4c4.textContent = (allFiatRepairs * allBsValue) / allCelsValue;
+        r4c5.textContent = (allHondaRepairs * allBsValue) / allCelsValue;
+        r4c6.textContent = (allNissanRepairs * allBsValue) / allCelsValue;
+        r4c7.textContent = (allOpelRepairs * allBsValue) / allCelsValue;
+        r4c8.textContent = (allToyotaRepairs * allBsValue) / allCelsValue;
+
+        r5c1.textContent = (allAudiRepairs * allElsValue) / allCelsValue;
+        r5c2.textContent = (allBmwRepairs * allElsValue) / allCelsValue;
+        r5c3.textContent = (allCitroenRepairs * allElsValue) / allCelsValue;
+        r5c4.textContent = (allFiatRepairs * allElsValue) / allCelsValue;
+        r5c5.textContent = (allHondaRepairs * allElsValue) / allCelsValue;
+        r5c6.textContent = (allNissanRepairs * allElsValue) / allCelsValue;
+        r5c7.textContent = (allOpelRepairs * allElsValue) / allCelsValue;
+        r5c8.textContent = (allToyotaRepairs * allElsValue) / allCelsValue;
+
+        r6c1.textContent = (allAudiRepairs * allEngineValue) / allCelsValue;
+        r6c2.textContent = (allBmwRepairs * allEngineValue) / allCelsValue;
+        r6c3.textContent = (allCitroenRepairs * allEngineValue) / allCelsValue;
+        r6c4.textContent = (allFiatRepairs * allEngineValue) / allCelsValue;
+        r6c5.textContent = (allHondaRepairs * allEngineValue) / allCelsValue;
+        r6c6.textContent = (allNissanRepairs * allEngineValue) / allCelsValue;
+        r6c7.textContent = (allOpelRepairs * allEngineValue) / allCelsValue;
+        r6c8.textContent = (allToyotaRepairs * allEngineValue) / allCelsValue;
+
+        r7c1.textContent = (allAudiRepairs * allBodyValue) / allCelsValue;
+        r7c2.textContent = (allBmwRepairs * allBodyValue) / allCelsValue;
+        r7c3.textContent = (allCitroenRepairs * allBodyValue) / allCelsValue;
+        r7c4.textContent = (allFiatRepairs * allBodyValue) / allCelsValue;
+        r7c5.textContent = (allHondaRepairs * allBodyValue) / allCelsValue;
+        r7c6.textContent = (allNissanRepairs * allBodyValue) / allCelsValue;
+        r7c7.textContent = (allOpelRepairs * allBodyValue) / allCelsValue;
+        r7c8.textContent = (allToyotaRepairs * allBodyValue) / allCelsValue;
+
+        r8c1.textContent = (allAudiRepairs * allSusValue) / allCelsValue;
+        r8c2.textContent = (allBmwRepairs * allSusValue) / allCelsValue;
+        r8c3.textContent = (allCitroenRepairs * allSusValue) / allCelsValue;
+        r8c4.textContent = (allFiatRepairs * allSusValue) / allCelsValue;
+        r8c5.textContent = (allHondaRepairs * allSusValue) / allCelsValue;
+        r8c6.textContent = (allNissanRepairs * allSusValue) / allCelsValue;
+        r8c7.textContent = (allOpelRepairs * allSusValue) / allCelsValue;
+        r8c8.textContent = (allToyotaRepairs * allSusValue) / allCelsValue;
 
     }).catch(err => {
-        // Handle Error Here
+
         console.error(err);
     });
 }
