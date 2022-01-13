@@ -674,6 +674,100 @@ const showStats = () => {
         r8c7.textContent = (allOpelRepairs * allSusValue) / allCelsValue;
         r8c8.textContent = (allToyotaRepairs * allSusValue) / allCelsValue;
 
+        
+        const t3r1c1 = document.getElementById('t3r1c1');
+        const t3r1c2 = document.getElementById('t3r1c2');
+        const t3r1c3 = document.getElementById('t3r1c3');
+        const t3r1c4 = document.getElementById('t3r1c4');
+        const t3r1c5 = document.getElementById('t3r1c5');
+        const t3r1c6 = document.getElementById('t3r1c6');
+        const t3r1c7 = document.getElementById('t3r1c7');
+        const t3r1c8 = document.getElementById('t3r1c8');
+
+        const t3r2c1 = document.getElementById('t3r2c1');
+        const t3r2c2 = document.getElementById('t3r2c2');
+        const t3r2c3 = document.getElementById('t3r2c3');
+        const t3r2c4 = document.getElementById('t3r2c4');
+        const t3r2c5 = document.getElementById('t3r2c5');
+        const t3r2c6 = document.getElementById('t3r2c6');
+        const t3r2c7 = document.getElementById('t3r2c7');
+        const t3r2c8 = document.getElementById('t3r2c8');
+
+        const t3r3c1 = document.getElementById('t3r3c1');
+        const t3r3c2 = document.getElementById('t3r3c2');
+        const t3r3c3 = document.getElementById('t3r3c3');
+        const t3r3c4 = document.getElementById('t3r3c4');
+        const t3r3c5 = document.getElementById('t3r3c5');
+        const t3r3c6 = document.getElementById('t3r3c6');
+        const t3r3c7 = document.getElementById('t3r3c7');
+        const t3r3c8 = document.getElementById('t3r3c8');
+
+        const t3r4c1 = document.getElementById('t3r4c1');
+        const t3r4c2 = document.getElementById('t3r4c2');
+        const t3r4c3 = document.getElementById('t3r4c3');
+        const t3r4c4 = document.getElementById('t3r4c4');
+        const t3r4c5 = document.getElementById('t3r4c5');
+        const t3r4c6 = document.getElementById('t3r4c6');
+        const t3r4c7 = document.getElementById('t3r4c7');
+        const t3r4c8 = document.getElementById('t3r4c8');
+
+        const t3r5c1 = document.getElementById('t3r5c1');
+        const t3r5c2 = document.getElementById('t3r5c2');
+        const t3r5c3 = document.getElementById('t3r5c3');
+        const t3r5c4 = document.getElementById('t3r5c4');
+        const t3r5c5 = document.getElementById('t3r5c5');
+        const t3r5c6 = document.getElementById('t3r5c6');
+        const t3r5c7 = document.getElementById('t3r5c7');
+        const t3r5c8 = document.getElementById('t3r5c8');
+
+        const t3r6c1 = document.getElementById('t3r6c1');
+        const t3r6c2 = document.getElementById('t3r6c2');
+        const t3r6c3 = document.getElementById('t3r6c3');
+        const t3r6c4 = document.getElementById('t3r6c4');
+        const t3r6c5 = document.getElementById('t3r6c5');
+        const t3r6c6 = document.getElementById('t3r6c6');
+        const t3r6c7 = document.getElementById('t3r6c7');
+        const t3r6c8 = document.getElementById('t3r6c8');
+
+        const t3r7c1 = document.getElementById('t3r7c1');
+        const t3r7c2 = document.getElementById('t3r7c2');
+        const t3r7c3 = document.getElementById('t3r7c3');
+        const t3r7c4 = document.getElementById('t3r7c4');
+        const t3r7c5 = document.getElementById('t3r7c5');
+        const t3r7c6 = document.getElementById('t3r7c6');
+        const t3r7c7 = document.getElementById('t3r7c7');
+        const t3r7c8 = document.getElementById('t3r7c8');
+
+        const t3r8c1 = document.getElementById('t3r8c1');
+        const t3r8c2 = document.getElementById('t3r8c2');
+        const t3r8c3 = document.getElementById('t3r8c3');
+        const t3r8c4 = document.getElementById('t3r8c4');
+        const t3r8c5 = document.getElementById('t3r8c5');
+        const t3r8c6 = document.getElementById('t3r8c6');
+        const t3r8c7 = document.getElementById('t3r8c7');
+        const t3r8c8 = document.getElementById('t3r8c8');
+
+        const tab2Value = document.querySelectorAll('.t2')
+        // let newArr = Array.from(tab2Value)
+
+
+        const tab1Value = document.querySelectorAll('.t1')
+        const sumArr = [];
+
+        for ( let i = 0; i< tab2Value.length; i++){
+            console.log(tab1Value[i].textContent - tab2Value[i].textContent)
+        }
+
+
+        // console.log(tab1Value)
+
+        // const tab2Parsed = newArr.map(x.textContent => parseInt(x));
+        // console.log(tab2Parsed);
+        
+
+        t3r1c1.textContent = mAudiValue.textContent - r1c1.textContent
+        
+
     }).catch(err => {
 
         console.error(err);

@@ -6,11 +6,11 @@ const pageNumbers = document.getElementById('pagination');
 
 const showOrders = () => {
     axios.get('https://car-service-api-app.herokuapp.com/repairs', {
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + localStorage.getItem('token')
-        }
-    })
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        })
         .then((res) => {
 
             console.log(res.data)
@@ -204,6 +204,7 @@ const showOrders = () => {
                     popupTextContainer.appendChild(popupOrdersInfo5);
                     popupTextContainer.appendChild(popupOrdersInfo6);
                     popupTextContainer.appendChild(popupOrdersInfo7);
+
                     popupOrdersInfo.appendChild(popupText);
                     popupOrdersInfo2.appendChild(popupText2);
                     popupOrdersInfo3.appendChild(popupText3);
@@ -274,7 +275,7 @@ const showOrders = () => {
                         popupText3.textContent = 'None';
                         popupTextPrice3.textContent = '0zł';
                     } else {
-                        popupTex3.textContent = res.data[i].items[2].category + ':';
+                        popupText3.textContent = res.data[i].items[2].category + ':';
                         popupTextPrice3.textContent = res.data[i].items[2].amount + 'zł';
                     };
 
