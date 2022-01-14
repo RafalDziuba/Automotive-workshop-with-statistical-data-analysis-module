@@ -602,171 +602,123 @@ const showStats = () => {
 
         console.log(allCelsValue)
 
-        r1c1.textContent = (allAudiRepairs * allMaintenanceValue) / allCelsValue;
-        r1c2.textContent = (allBmwRepairs * allMaintenanceValue) / allCelsValue;
-        r1c3.textContent = (allCitroenRepairs * allMaintenanceValue) / allCelsValue;
-        r1c4.textContent = (allFiatRepairs * allMaintenanceValue) / allCelsValue;
-        r1c5.textContent = (allHondaRepairs * allMaintenanceValue) / allCelsValue;
-        r1c6.textContent = (allNissanRepairs * allMaintenanceValue) / allCelsValue;
-        r1c7.textContent = (allOpelRepairs * allMaintenanceValue) / allCelsValue;
-        r1c8.textContent = (allToyotaRepairs * allMaintenanceValue) / allCelsValue;
+        r1c1.textContent = ((allAudiRepairs * allMaintenanceValue) / allCelsValue).toFixed(2);
+        r1c2.textContent = ((allBmwRepairs * allMaintenanceValue) / allCelsValue).toFixed(2);
+        r1c3.textContent = ((allCitroenRepairs * allMaintenanceValue) / allCelsValue).toFixed(2);
+        r1c4.textContent = ((allFiatRepairs * allMaintenanceValue) / allCelsValue).toFixed(2);
+        r1c5.textContent = ((allHondaRepairs * allMaintenanceValue) / allCelsValue).toFixed(2);
+        r1c6.textContent = ((allNissanRepairs * allMaintenanceValue) / allCelsValue).toFixed(2);
+        r1c7.textContent = ((allOpelRepairs * allMaintenanceValue) / allCelsValue).toFixed(2);
+        r1c8.textContent = ((allToyotaRepairs * allMaintenanceValue) / allCelsValue).toFixed(2);
 
-        r2c1.textContent = (allAudiRepairs * allCsystemValue) / allCelsValue;
-        r2c2.textContent = (allBmwRepairs * allCsystemValue) / allCelsValue;
-        r2c3.textContent = (allCitroenRepairs * allCsystemValue) / allCelsValue;
-        r2c4.textContent = (allFiatRepairs * allCsystemValue) / allCelsValue;
-        r2c5.textContent = (allHondaRepairs * allCsystemValue) / allCelsValue;
-        r2c6.textContent = (allNissanRepairs * allCsystemValue) / allCelsValue;
-        r2c7.textContent = (allOpelRepairs * allCsystemValue) / allCelsValue;
-        r2c8.textContent = (allToyotaRepairs * allCsystemValue) / allCelsValue;
+        r2c1.textContent = ((allAudiRepairs * allCsystemValue) / allCelsValue).toFixed(2);
+        r2c2.textContent = ((allBmwRepairs * allCsystemValue) / allCelsValue).toFixed(2);
+        r2c3.textContent = ((allCitroenRepairs * allCsystemValue) / allCelsValue).toFixed(2);
+        r2c4.textContent = ((allFiatRepairs * allCsystemValue) / allCelsValue).toFixed(2);
+        r2c5.textContent = ((allHondaRepairs * allCsystemValue) / allCelsValue).toFixed(2);
+        r2c6.textContent = ((allNissanRepairs * allCsystemValue) / allCelsValue).toFixed(2);
+        r2c7.textContent = ((allOpelRepairs * allCsystemValue) / allCelsValue).toFixed(2);
+        r2c8.textContent = ((allToyotaRepairs * allCsystemValue) / allCelsValue).toFixed(2);
 
-        r3c1.textContent = (allAudiRepairs * allExsValue) / allCelsValue;
-        r3c2.textContent = (allBmwRepairs * allExsValue) / allCelsValue;
-        r3c3.textContent = (allCitroenRepairs * allExsValue) / allCelsValue;
-        r3c4.textContent = (allFiatRepairs * allExsValue) / allCelsValue;
-        r3c5.textContent = (allHondaRepairs * allExsValue) / allCelsValue;
-        r3c6.textContent = (allNissanRepairs * allExsValue) / allCelsValue;
-        r3c7.textContent = (allOpelRepairs * allExsValue) / allCelsValue;
-        r3c8.textContent = (allToyotaRepairs * allExsValue) / allCelsValue;
+        r3c1.textContent = ((allAudiRepairs * allExsValue) / allCelsValue).toFixed(2);
+        r3c2.textContent = ((allBmwRepairs * allExsValue) / allCelsValue).toFixed(2);
+        r3c3.textContent = ((allCitroenRepairs * allExsValue) / allCelsValue).toFixed(2);
+        r3c4.textContent = ((allFiatRepairs * allExsValue) / allCelsValue).toFixed(2);
+        r3c5.textContent = ((allHondaRepairs * allExsValue) / allCelsValue).toFixed(2);
+        r3c6.textContent = ((allNissanRepairs * allExsValue) / allCelsValue).toFixed(2);
+        r3c7.textContent = ((allOpelRepairs * allExsValue) / allCelsValue).toFixed(2);
+        r3c8.textContent = ((allToyotaRepairs * allExsValue) / allCelsValue).toFixed(2);
 
-        r4c1.textContent = (allAudiRepairs * allBsValue) / allCelsValue;
-        r4c2.textContent = (allBmwRepairs * allBsValue) / allCelsValue;
-        r4c3.textContent = (allCitroenRepairs * allBsValue) / allCelsValue;
-        r4c4.textContent = (allFiatRepairs * allBsValue) / allCelsValue;
-        r4c5.textContent = (allHondaRepairs * allBsValue) / allCelsValue;
-        r4c6.textContent = (allNissanRepairs * allBsValue) / allCelsValue;
-        r4c7.textContent = (allOpelRepairs * allBsValue) / allCelsValue;
-        r4c8.textContent = (allToyotaRepairs * allBsValue) / allCelsValue;
+        r4c1.textContent = ((allAudiRepairs * allBsValue) / allCelsValue).toFixed(2);
+        r4c2.textContent = ((allBmwRepairs * allBsValue) / allCelsValue).toFixed(2);
+        r4c3.textContent = ((allCitroenRepairs * allBsValue) / allCelsValue).toFixed(2);
+        r4c4.textContent = ((allFiatRepairs * allBsValue) / allCelsValue).toFixed(2);
+        r4c5.textContent = ((allHondaRepairs * allBsValue) / allCelsValue).toFixed(2);
+        r4c6.textContent = ((allNissanRepairs * allBsValue) / allCelsValue).toFixed(2);
+        r4c7.textContent = ((allOpelRepairs * allBsValue) / allCelsValue).toFixed(2);
+        r4c8.textContent = ((allToyotaRepairs * allBsValue) / allCelsValue).toFixed(2);
 
-        r5c1.textContent = (allAudiRepairs * allElsValue) / allCelsValue;
-        r5c2.textContent = (allBmwRepairs * allElsValue) / allCelsValue;
-        r5c3.textContent = (allCitroenRepairs * allElsValue) / allCelsValue;
-        r5c4.textContent = (allFiatRepairs * allElsValue) / allCelsValue;
-        r5c5.textContent = (allHondaRepairs * allElsValue) / allCelsValue;
-        r5c6.textContent = (allNissanRepairs * allElsValue) / allCelsValue;
-        r5c7.textContent = (allOpelRepairs * allElsValue) / allCelsValue;
-        r5c8.textContent = (allToyotaRepairs * allElsValue) / allCelsValue;
+        r5c1.textContent = ((allAudiRepairs * allElsValue) / allCelsValue).toFixed(2);
+        r5c2.textContent = ((allBmwRepairs * allElsValue) / allCelsValue).toFixed(2);
+        r5c3.textContent = ((allCitroenRepairs * allElsValue) / allCelsValue).toFixed(2);
+        r5c4.textContent = ((allFiatRepairs * allElsValue) / allCelsValue).toFixed(2);
+        r5c5.textContent = ((allHondaRepairs * allElsValue) / allCelsValue).toFixed(2);
+        r5c6.textContent = ((allNissanRepairs * allElsValue) / allCelsValue).toFixed(2);
+        r5c7.textContent = ((allOpelRepairs * allElsValue) / allCelsValue).toFixed(2);
+        r5c8.textContent = ((allToyotaRepairs * allElsValue) / allCelsValue).toFixed(2);
 
-        r6c1.textContent = (allAudiRepairs * allEngineValue) / allCelsValue;
-        r6c2.textContent = (allBmwRepairs * allEngineValue) / allCelsValue;
-        r6c3.textContent = (allCitroenRepairs * allEngineValue) / allCelsValue;
-        r6c4.textContent = (allFiatRepairs * allEngineValue) / allCelsValue;
-        r6c5.textContent = (allHondaRepairs * allEngineValue) / allCelsValue;
-        r6c6.textContent = (allNissanRepairs * allEngineValue) / allCelsValue;
-        r6c7.textContent = (allOpelRepairs * allEngineValue) / allCelsValue;
-        r6c8.textContent = (allToyotaRepairs * allEngineValue) / allCelsValue;
+        r6c1.textContent = ((allAudiRepairs * allEngineValue) / allCelsValue).toFixed(2);
+        r6c2.textContent = ((allBmwRepairs * allEngineValue) / allCelsValue).toFixed(2);
+        r6c3.textContent = ((allCitroenRepairs * allEngineValue) / allCelsValue).toFixed(2);
+        r6c4.textContent = ((allFiatRepairs * allEngineValue) / allCelsValue).toFixed(2);
+        r6c5.textContent = ((allHondaRepairs * allEngineValue) / allCelsValue).toFixed(2);
+        r6c6.textContent = ((allNissanRepairs * allEngineValue) / allCelsValue).toFixed(2);
+        r6c7.textContent = ((allOpelRepairs * allEngineValue) / allCelsValue).toFixed(2);
+        r6c8.textContent = ((allToyotaRepairs * allEngineValue) / allCelsValue).toFixed(2);
 
-        r7c1.textContent = (allAudiRepairs * allBodyValue) / allCelsValue;
-        r7c2.textContent = (allBmwRepairs * allBodyValue) / allCelsValue;
-        r7c3.textContent = (allCitroenRepairs * allBodyValue) / allCelsValue;
-        r7c4.textContent = (allFiatRepairs * allBodyValue) / allCelsValue;
-        r7c5.textContent = (allHondaRepairs * allBodyValue) / allCelsValue;
-        r7c6.textContent = (allNissanRepairs * allBodyValue) / allCelsValue;
-        r7c7.textContent = (allOpelRepairs * allBodyValue) / allCelsValue;
-        r7c8.textContent = (allToyotaRepairs * allBodyValue) / allCelsValue;
+        r7c1.textContent = ((allAudiRepairs * allBodyValue) / allCelsValue).toFixed(2);
+        r7c2.textContent = ((allBmwRepairs * allBodyValue) / allCelsValue).toFixed(2);
+        r7c3.textContent = ((allCitroenRepairs * allBodyValue) / allCelsValue).toFixed(2);
+        r7c4.textContent = ((allFiatRepairs * allBodyValue) / allCelsValue).toFixed(2);
+        r7c5.textContent = ((allHondaRepairs * allBodyValue) / allCelsValue).toFixed(2);
+        r7c6.textContent = ((allNissanRepairs * allBodyValue) / allCelsValue).toFixed(2);
+        r7c7.textContent = ((allOpelRepairs * allBodyValue) / allCelsValue).toFixed(2);
+        r7c8.textContent = ((allToyotaRepairs * allBodyValue) / allCelsValue).toFixed(2);
 
-        r8c1.textContent = (allAudiRepairs * allSusValue) / allCelsValue;
-        r8c2.textContent = (allBmwRepairs * allSusValue) / allCelsValue;
-        r8c3.textContent = (allCitroenRepairs * allSusValue) / allCelsValue;
-        r8c4.textContent = (allFiatRepairs * allSusValue) / allCelsValue;
-        r8c5.textContent = (allHondaRepairs * allSusValue) / allCelsValue;
-        r8c6.textContent = (allNissanRepairs * allSusValue) / allCelsValue;
-        r8c7.textContent = (allOpelRepairs * allSusValue) / allCelsValue;
-        r8c8.textContent = (allToyotaRepairs * allSusValue) / allCelsValue;
+        r8c1.textContent = ((allAudiRepairs * allSusValue) / allCelsValue).toFixed(2);
+        r8c2.textContent = ((allBmwRepairs * allSusValue) / allCelsValue).toFixed(2);
+        r8c3.textContent = ((allCitroenRepairs * allSusValue) / allCelsValue).toFixed(2);
+        r8c4.textContent = ((allFiatRepairs * allSusValue) / allCelsValue).toFixed(2);
+        r8c5.textContent = ((allHondaRepairs * allSusValue) / allCelsValue).toFixed(2);
+        r8c6.textContent = ((allNissanRepairs * allSusValue) / allCelsValue).toFixed(2);
+        r8c7.textContent = ((allOpelRepairs * allSusValue) / allCelsValue).toFixed(2);
+        r8c8.textContent = ((allToyotaRepairs * allSusValue) / allCelsValue).toFixed(2);
 
-        
-        const t3r1c1 = document.getElementById('t3r1c1');
-        const t3r1c2 = document.getElementById('t3r1c2');
-        const t3r1c3 = document.getElementById('t3r1c3');
-        const t3r1c4 = document.getElementById('t3r1c4');
-        const t3r1c5 = document.getElementById('t3r1c5');
-        const t3r1c6 = document.getElementById('t3r1c6');
-        const t3r1c7 = document.getElementById('t3r1c7');
-        const t3r1c8 = document.getElementById('t3r1c8');
-
-        const t3r2c1 = document.getElementById('t3r2c1');
-        const t3r2c2 = document.getElementById('t3r2c2');
-        const t3r2c3 = document.getElementById('t3r2c3');
-        const t3r2c4 = document.getElementById('t3r2c4');
-        const t3r2c5 = document.getElementById('t3r2c5');
-        const t3r2c6 = document.getElementById('t3r2c6');
-        const t3r2c7 = document.getElementById('t3r2c7');
-        const t3r2c8 = document.getElementById('t3r2c8');
-
-        const t3r3c1 = document.getElementById('t3r3c1');
-        const t3r3c2 = document.getElementById('t3r3c2');
-        const t3r3c3 = document.getElementById('t3r3c3');
-        const t3r3c4 = document.getElementById('t3r3c4');
-        const t3r3c5 = document.getElementById('t3r3c5');
-        const t3r3c6 = document.getElementById('t3r3c6');
-        const t3r3c7 = document.getElementById('t3r3c7');
-        const t3r3c8 = document.getElementById('t3r3c8');
-
-        const t3r4c1 = document.getElementById('t3r4c1');
-        const t3r4c2 = document.getElementById('t3r4c2');
-        const t3r4c3 = document.getElementById('t3r4c3');
-        const t3r4c4 = document.getElementById('t3r4c4');
-        const t3r4c5 = document.getElementById('t3r4c5');
-        const t3r4c6 = document.getElementById('t3r4c6');
-        const t3r4c7 = document.getElementById('t3r4c7');
-        const t3r4c8 = document.getElementById('t3r4c8');
-
-        const t3r5c1 = document.getElementById('t3r5c1');
-        const t3r5c2 = document.getElementById('t3r5c2');
-        const t3r5c3 = document.getElementById('t3r5c3');
-        const t3r5c4 = document.getElementById('t3r5c4');
-        const t3r5c5 = document.getElementById('t3r5c5');
-        const t3r5c6 = document.getElementById('t3r5c6');
-        const t3r5c7 = document.getElementById('t3r5c7');
-        const t3r5c8 = document.getElementById('t3r5c8');
-
-        const t3r6c1 = document.getElementById('t3r6c1');
-        const t3r6c2 = document.getElementById('t3r6c2');
-        const t3r6c3 = document.getElementById('t3r6c3');
-        const t3r6c4 = document.getElementById('t3r6c4');
-        const t3r6c5 = document.getElementById('t3r6c5');
-        const t3r6c6 = document.getElementById('t3r6c6');
-        const t3r6c7 = document.getElementById('t3r6c7');
-        const t3r6c8 = document.getElementById('t3r6c8');
-
-        const t3r7c1 = document.getElementById('t3r7c1');
-        const t3r7c2 = document.getElementById('t3r7c2');
-        const t3r7c3 = document.getElementById('t3r7c3');
-        const t3r7c4 = document.getElementById('t3r7c4');
-        const t3r7c5 = document.getElementById('t3r7c5');
-        const t3r7c6 = document.getElementById('t3r7c6');
-        const t3r7c7 = document.getElementById('t3r7c7');
-        const t3r7c8 = document.getElementById('t3r7c8');
-
-        const t3r8c1 = document.getElementById('t3r8c1');
-        const t3r8c2 = document.getElementById('t3r8c2');
-        const t3r8c3 = document.getElementById('t3r8c3');
-        const t3r8c4 = document.getElementById('t3r8c4');
-        const t3r8c5 = document.getElementById('t3r8c5');
-        const t3r8c6 = document.getElementById('t3r8c6');
-        const t3r8c7 = document.getElementById('t3r8c7');
-        const t3r8c8 = document.getElementById('t3r8c8');
 
         const tab2Value = document.querySelectorAll('.t2')
+
+        // for (let i = 0; i < tab2Value.length; i++){
+        //     parseInt(tab2Value[i].textContent).toFixed(2);
+        // }
+
+        const tab3Value = document.querySelectorAll('.t3')
         // let newArr = Array.from(tab2Value)
 
 
         const tab1Value = document.querySelectorAll('.t1')
         const sumArr = [];
 
-        for ( let i = 0; i< tab2Value.length; i++){
-            console.log(tab1Value[i].textContent - tab2Value[i].textContent)
+        for (let i = 0; i < tab2Value.length; i++) {
+            sumArr.push(((tab1Value[i].textContent - tab2Value[i].textContent) * (tab1Value[i].textContent - tab2Value[i].textContent) / tab2Value[i].textContent).toFixed(2));
+        }
+        // console.log(sumArr)
+
+        for (let i = 0; i < tab2Value.length; i++) {
+            tab3Value[i].textContent = sumArr[i];
         }
 
+        const chi2 = document.getElementById('chi2-value');
+    //    const res =  sumArr.map(function(x){
+    //         return parseInt(x, 10);
+    //     });
+    //     console.log(res)
+    // for ( let i = 0; i < tab3Value.length; i++){
+    //     console.log(parseFloat(tab3Value[i].textContent, 8))
+    // }
+        const chi2Value = sumArr.reduce(function(acc, val){return parseFloat(acc, 16) + parseFloat(val, 16);}, 0);
+
+        
+        chi2.textContent = chi2Value.toFixed(2);
+        // console.log(chi2Value)
 
         // console.log(tab1Value)
 
         // const tab2Parsed = newArr.map(x.textContent => parseInt(x));
         // console.log(tab2Parsed);
-        
 
-        t3r1c1.textContent = mAudiValue.textContent - r1c1.textContent
-        
+
+        // t3r1c1.textContent = mAudiValue.textContent - r1c1.textContent
+
 
     }).catch(err => {
 
