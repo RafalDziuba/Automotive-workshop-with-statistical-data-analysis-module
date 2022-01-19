@@ -1,11 +1,28 @@
 const ordersCont = document.querySelector('.orders-container');
-const pageNumbers = document.getElementById('pagination');
+const loadMoreBtn = document.getElementById('loadMore');
 
+let ordersHandler = [];
+// const incraseRecords = () => {
+//     recordsPerPage = recordsPerPage + 9;
+// }
+
+//${recordsPerPage = recordsPerPage + 9}
+// + '&per=' + recordsPerPage
+// let recordsPerPage = 9;
+let page = 1;
+const incrasePage = () => {
+    page++
+}
+// const API_LINK = 'https://car-service-api-app.herokuapp.com/repairs';
+// const URL =  `${API_LINK}?page=${page}&per=9`;
 
 
 
 const showOrders = () => {
-    axios.get('https://car-service-api-app.herokuapp.com/repairs', {
+    const API_LINK = 'https://car-service-api-app.herokuapp.com/repairs';
+    const URL = `${API_LINK}?page=${page}&per=9`;
+    console.log(page)
+    axios.get(URL, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -14,7 +31,13 @@ const showOrders = () => {
         .then((res) => {
 
             console.log(res.data)
+            for (let i = 0; i < res.data.length; i++) {
+                ordersHandler.push(res.data[i])
+            }
+
             res.data.forEach(element => {
+
+
 
                 const orderWrap = document.createElement('div');
                 const orderBrand = document.createElement('div');
@@ -73,21 +96,21 @@ const showOrders = () => {
 
 
             });
-
+            console.log(URL)
             const priceList = document.querySelectorAll('.price');
             const dateList = document.querySelectorAll('.date');
             const brandList = document.querySelectorAll('.brand');
 
             for (let i = 0; i < priceList.length; i++) {
-                priceList[i].textContent = res.data[i].total_amount;
+                priceList[i].textContent = ordersHandler[i].total_amount;
             }
 
-            for (let i = 0; i < priceList.length; i++) {
-                brandList[i].textContent = res.data[i].brand;
+            for (let i = 0; i < brandList.length; i++) {
+                brandList[i].textContent = ordersHandler[i].brand;
             }
 
             for (let i = 0; i < dateList.length; i++) {
-                dateList[i].textContent = res.data[i].created_at.slice(0, 10);
+                dateList[i].textContent = ordersHandler[i].created_at.slice(0, 10);
             }
 
 
@@ -126,10 +149,10 @@ const showOrders = () => {
                     cancelButtonDecline.addEventListener('click', removePopup);
 
                     cancelButtonConfirm.addEventListener('click', () => {
-                        let orderId = res.data[i].id
+                        let orderId = ordersHandler[i].id
                         console.log(orderId)
                         const api_link = 'https://car-service-api-app.herokuapp.com/repairs/'
-                        const api_parameter = '\?BYPASS_AUTHENTICATION\=true'
+                        // const api_parameter = '\?BYPASS_AUTHENTICATION\=true'
                         const url = api_link + orderId;
 
                         fetch(url, {
@@ -150,11 +173,8 @@ const showOrders = () => {
 
 
 
-
-
-
             const nodeListOrders = document.querySelectorAll('.order');
-            const allOrders = Array.from(nodeListOrders);
+            // const allOrders = Array.from(nodeListOrders);
 
             const displayPopupBtn = document.querySelectorAll('.btn-show');
 
@@ -221,9 +241,6 @@ const showOrders = () => {
                     popupOrdersInfo6.appendChild(popupTextPrice6);
                     popupOrdersInfo7.appendChild(popupTextPrice7);
 
-
-                    // popup.appendChild(popupOrdersInfo);
-
                     popupOrdersInfo.classList.add('popup-orders-info')
                     popupOrdersInfo2.classList.add('popup-orders-info')
                     popupOrdersInfo3.classList.add('popup-orders-info')
@@ -245,130 +262,80 @@ const showOrders = () => {
                     popupText7.classList.add('popup-info');
 
                     closeBtn.textContent = 'X';
-                    // console.log(res.data[i].id);
-                    // console.log(res.data[i].items.map((item)=>`${item.category}: ${item.amount}`))
+
 
                     const closePopup = () => {
                         section.removeChild(popup);
                     }
 
 
-                    if (res.data[i].items[0] === undefined) {
+                    if (ordersHandler[i].items[0] === undefined) {
                         popupText.textContent = 'None';
                         popupTextPrice.textContent = '0zł';
                     } else {
-                        popupText.textContent = res.data[i].items[0].category + ':';
-                        popupTextPrice.textContent = res.data[i].items[0].amount + 'zł';
+                        popupText.textContent = ordersHandler[i].items[0].category + ':';
+                        popupTextPrice.textContent = ordersHandler[i].items[0].amount + 'zł';
                     };
 
 
-                    if (res.data[i].items[1] === undefined) {
+                    if (ordersHandler[i].items[1] === undefined) {
                         popupText2.textContent = 'None';
                         popupTextPrice2.textContent = '0zł';
                     } else {
-                        popupText2.textContent = res.data[i].items[1].category + ':';
-                        popupTextPrice2.textContent = res.data[i].items[1].amount + 'zł';
+                        popupText2.textContent = ordersHandler[i].items[1].category + ':';
+                        popupTextPrice2.textContent = ordersHandler[i].items[1].amount + 'zł';
                     };
 
 
-                    if (res.data[i].items[2] === undefined) {
+                    if (ordersHandler[i].items[2] === undefined) {
                         popupText3.textContent = 'None';
                         popupTextPrice3.textContent = '0zł';
                     } else {
-                        popupText3.textContent = res.data[i].items[2].category + ':';
-                        popupTextPrice3.textContent = res.data[i].items[2].amount + 'zł';
+                        popupText3.textContent = ordersHandler[i].items[2].category + ':';
+                        popupTextPrice3.textContent = ordersHandler[i].items[2].amount + 'zł';
                     };
 
 
-                    if (res.data[i].items[3] === undefined) {
+                    if (ordersHandler[i].items[3] === undefined) {
                         popupText4.textContent = 'None';
                         popupTextPrice4.textContent = '0zł';
                     } else {
-                        popupText4.textContent = res.data[i].items[3].category + ':';
-                        popupTextPrice4.textContent = res.data[i].items[3].amount + 'zł';
+                        popupText4.textContent = ordersHandler[i].items[3].category + ':';
+                        popupTextPrice4.textContent = ordersHandler[i].items[3].amount + 'zł';
                     };
 
 
-                    if (res.data[i].items[4] === undefined) {
+                    if (ordersHandler[i].items[4] === undefined) {
                         popupText5.textContent = 'None';
                         popupTextPrice5.textContent = '0zł';
                     } else {
-                        popupText5.textContent = res.data[i].items[4].category + ':';
-                        popupTextPrice5.textContent = res.data[i].items[4].amount + 'zł';
+                        popupText5.textContent = ordersHandler[i].items[4].category + ':';
+                        popupTextPrice5.textContent = ordersHandler[i].items[4].amount + 'zł';
                     };
 
 
-                    if (res.data[i].items[5] === undefined) {
+                    if (ordersHandler[i].items[5] === undefined) {
                         popupText6.textContent = 'None';
                         popupTextPrice6.textContent = '0zł';
                     } else {
-                        popupText6.textContent = res.data[i].items[5].category + ':';
-                        popupTextPrice6.textContent = res.data[i].items[5].amount + 'zł';
+                        popupText6.textContent = ordersHandler[i].items[5].category + ':';
+                        popupTextPrice6.textContent = ordersHandler[i].items[5].amount + 'zł';
                     };
 
 
-                    if (res.data[i].items[6] === undefined) {
+                    if (ordersHandler[i].items[6] === undefined) {
                         popupText7.textContent = 'None';
                         popupTextPrice7.textContent = '0zł';
                     } else {
-                        popupText7.textContent = res.data[i].items[6].category + ':';
-                        popupTextPrice7.textContent = res.data[i].items[6].amount + 'zł';
+                        popupText7.textContent = ordersHandler[i].items[6].category + ':';
+                        popupTextPrice7.textContent = ordersHandler[i].items[6].amount + 'zł';
                     };
 
-
-                    // popupTextPrice.textContent = res.data[i].items[2].amount
-                    console.log(res.data[i].id)
+                    console.log(ordersHandler[i].id)
                     closeBtn.addEventListener('click', closePopup);
                 });
             }
 
-            let currentPage = 1;
-            let rows = 2;
-            const displayList = (items, wrapper, rowsPerPage, page) => {
-                wrapper.innerHTML = "";
-                page--;
-                let start = rowsPerPage * page;
-                let end = start + rowsPerPage;
-                let paginatedItems = items.slice(start, end);
-                for (let i = 0; i < paginatedItems.length; i++) {
-                    let item = paginatedItems[i];
-                    wrapper.appendChild(item);
-                }
-            }
-
-            const setupPagination = (items, wrapper, rowsPerPage) => {
-                wrapper.innerHTML = '';
-
-                let pageCount = Math.ceil(items.length / rowsPerPage);
-                for (let i = 1; i < pageCount + 1; i++) {
-                    let btn = paginationButton(i, items);
-                    wrapper.appendChild(btn);
-                }
-
-            }
-
-            const paginationButton = (page, items) => {
-                let button = document.createElement('button');
-                button.innerText = page;
-
-                if (currentPage == page) {
-                    button.classList.add('active');
-                };
-
-                button.addEventListener('click', () => {
-                    currentPage = page;
-                    displayList(items, ordersCont, rows, currentPage);
-
-                    let currentBtn = document.querySelector('.pagenumbers button.active');
-                    currentBtn.classList.remove('active');
-
-                    button.classList.add('active');
-                })
-                return button;
-            }
-
-            displayList(allOrders, ordersCont, rows, currentPage);
-            setupPagination(allOrders, pageNumbers, rows);
 
         })
         .catch(function (error) {
@@ -376,4 +343,7 @@ const showOrders = () => {
         });
 }
 
+loadMoreBtn.addEventListener('click', showOrders);
+loadMoreBtn.addEventListener('click', incrasePage);
 showOrders();
+incrasePage();

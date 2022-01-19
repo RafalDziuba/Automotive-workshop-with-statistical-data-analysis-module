@@ -141,4 +141,21 @@ section .stats-container {
   width: 80%;
   margin-top: 5rem;
 }
+
+section .progress-bar-static {
+  width: 400px;
+  height: 30px;
+  background: red;
+  background: -webkit-gradient(linear, left top, right top, from(red), color-stop(50%, #ebf10a), to(#07e953));
+  background: linear-gradient(90deg, red 0%, #ebf10a 50%, #07e953 100%);
+  position: relative;
+}
+
+section .progress-bar-dynamic {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  height: 100%;
+  background-color: #fff;
+}
 /*# sourceMappingURL=stats.css.map */

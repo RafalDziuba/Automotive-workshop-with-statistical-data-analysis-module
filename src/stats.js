@@ -698,26 +698,54 @@ const showStats = () => {
         }
 
         const chi2 = document.getElementById('chi2-value');
-    //    const res =  sumArr.map(function(x){
-    //         return parseInt(x, 10);
-    //     });
-    //     console.log(res)
-    // for ( let i = 0; i < tab3Value.length; i++){
-    //     console.log(parseFloat(tab3Value[i].textContent, 8))
-    // }
-        const chi2Value = sumArr.reduce(function(acc, val){return parseFloat(acc, 16) + parseFloat(val, 16);}, 0);
+        const vc = document.getElementById('vc-value');
+        //    const res =  sumArr.map(function(x){
+        //         return parseInt(x, 10);
+        //     });
+        //     console.log(res)
+        // for ( let i = 0; i < tab3Value.length; i++){
+        //     console.log(parseFloat(tab3Value[i].textContent, 8))
+        // }
+        let chi2Value = sumArr.reduce(function (acc, val) {
+            return parseFloat(acc, 16) + parseFloat(val, 16);
+        }, 0);
 
-        
+
+        let vcValue = Math.sqrt((chi2Value) / (allCelsValue * 7));
+
         chi2.textContent = chi2Value.toFixed(2);
-        // console.log(chi2Value)
-
-        // console.log(tab1Value)
-
-        // const tab2Parsed = newArr.map(x.textContent => parseInt(x));
-        // console.log(tab2Parsed);
+        vc.textContent = vcValue.toFixed(2);
 
 
-        // t3r1c1.textContent = mAudiValue.textContent - r1c1.textContent
+        const dynamicProgress = () => {
+            const progressBar = document.querySelector('.progress-bar-dynamic');
+            let defaultwidth = 100;
+            let width = vcValue * 100
+            let dynamicWidth = defaultwidth - width;
+            progressBar.style.width = dynamicWidth + '%';
+        };
+
+        dynamicProgress();
+
+        const vcInterpretation = () => {
+
+            const text = document.getElementById('vci');
+            if (vcValue > 0 & vcValue < 0.2) {
+                text.textContent = 'Bardzo słaby związek';
+            } else if (vcValue > 0.2 & vcValue < 0.4 ) {
+                text.textContent = 'Słaby związek';
+            } else if (vcValue > 0.4 & vcValue < 0.6) {
+                text.textContent = 'Umiarkowany związek';
+            } else if (vcValue > 0.6 & vcValue < 0.8) {
+                text.textContent = 'Silny związek';
+            } else if (vcValue > 0.8 & vcValue < 1){
+                text.textContent = 'Bardzo silny związek'
+            } else {
+                text.textContent = 'Wartość poza skalą! Sprawdź obliczenia!'
+            }
+        }
+
+        vcInterpretation();
 
 
     }).catch(err => {

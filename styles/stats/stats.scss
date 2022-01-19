@@ -114,4 +114,24 @@ section {
         width: 80%;
         margin-top: 5rem;
     }
+
+
+            .progress-bar-static {
+                width: 400px;
+                height: 30px;
+                background: rgb(255, 0, 0);
+                background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(235, 241, 10, 1) 50%, rgba(7, 233, 83, 1) 100%);
+                position: relative;
+            }
+
+            .progress-bar-dynamic {
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                height: 100%;
+                background-color: #fff;
+
+
+    }
+
 }
