@@ -1,32 +1,32 @@
 @import '../colors';
-  
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-size: 10px;
-      font-family: 'Roboto', sans-serif;
-  }
 
-  body {
-      height: 200vh;
-      background-color: $mainColor;
-      display: flex;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
 
-  }
+body {
+    height: 200vh;
+    background-color: $primaryColor;
+    display: flex;
 
-  nav {
+}
+
+nav {
 
     height: 100%;
     width: 20%;
-    background-color: $secondColor;
+    background-color: $mainColor;
     position: fixed;
     box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
 
     .nav-header {
         height: 8%;
         width: 100%;
-        background-color: $primaryColor;
+        background-color: $mainColor;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,7 +34,7 @@
 
         p {
             font-size: 3rem;
-            color: white;
+            color: $buttonColor;
             font-weight: bold;
         }
     }
@@ -57,7 +57,7 @@
             font-size: 2rem;
             cursor: pointer;
             text-decoration: none;
-            color: white;
+            color: $fontColor;
             transition: margin 0.2s;
             display: flex;
             align-items: center;
@@ -70,8 +70,8 @@
         }
 
         a:hover {
-            text-shadow: rgba(255,255,255,0.9) 0px 0px 8px;
-            margin-left: 15%;
+            text-shadow: rgba(154, 226, 226, 0.7) 0px 0px 8px;
+            margin-left: 13%;
         }
 
 
@@ -83,7 +83,7 @@
 
         a {
             text-decoration: none;
-            color: white;
+            color: $fontColor;
             font-size: 2rem;
             margin-left: 12%;
             transition: margin 0.2s;
@@ -95,124 +95,152 @@
         }
 
         a:hover {
-            text-shadow: rgba(255,255,255,0.9) 0px 0px 8px;
-            margin-left: 15%;
+            text-shadow: rgba(154, 226, 226, 0.7) 0px 0px 8px;
         }
     }
 }
 
-  section {
-      width: 80%;
-      margin-left: 20%;
-      display: flex;
-      flex-direction: column;
+section {
+    width: 80%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
 
-      header {
-          height: 20vh;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
+    header {
+        height: 20vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
+        #total_orders {
+            font-weight: bold;
+        }
 
+        #total_income {
+            font-weight: bold;
+        }
 
-          .total-orders {
-              width: 50%;
-              height: 100%;
-              display: flex;
-              align-items: center;
-              background-color: $hoverColor;
-
-              p {
-                  margin-left: 15%;
-                  color: rgb(211, 22, 164);
-              }
-
-              p,
-              span {
-                  font-size: 4rem;
-              }
-          }
+        .total-orders {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background: rgb(108, 144, 190);
+            background: linear-gradient(0deg, rgba(108, 144, 190, 1) 0%, rgba(152, 193, 217, 1) 100%);
 
 
-          .total-income {
-              width: 50%;
-              height: 100%;
-              display: flex;
-              align-items: center;
-              background-color: #b6d6fa;
 
-              p {
-                  margin-left: 15%;
-                  color: rgb(211, 22, 164);
-              }
+            p {
+                margin-left: 15%;
+                color: white;
+            }
 
-              p,
-              span {
-                  font-size: 4rem;
-              }
-          }
+            p,
+            span {
+                font-size: 4rem;
+            }
+        }
 
 
-      }
+        .total-income {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background: rgb(108, 144, 190);
+            background: linear-gradient(0deg, rgba(108, 144, 190, 1) 0%, rgba(152, 193, 217, 1) 100%);
 
-      .form-container {
-          width: 100%;
-        //   min-height: 40%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+            p {
+                margin-left: 15%;
+                color: white;
+            }
 
-          .form-wrapper {
-              width: 60%;
-              height: 80%;
-              display: flex;
-              justify-content: flex-start;
-              align-items: flex-start;
-              flex-direction: column;
-#total-sum {
-    padding: 1rem 1.3rem;
-    font-size: 1.3rem;
+            p,
+            span {
+                font-size: 4rem;
+            }
+        }
+
+
+    }
+
+    .form-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .form-wrapper {
+            width: 60%;
+            height: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            #total-sum {
+                padding: 1rem 1.3rem;
+                font-size: 1.3rem;
+                background-color: rgb(150, 146, 146);
+                color: white;
+                border: none;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+            }
+
+            #total-sum:hover {
+                position: relative;
+                top: 2px;
+                left: 1px;
+                box-shadow: none;
+            }
+
+            form {
+                width: 60%;
+
+                .form-field {
+                    margin-top: 2rem;
+                    width: 100%;
+
+                    label {
+                        font-size: 1.6rem;
+                        color: $fontColor;
+                    }
+
+                    input {
+                        width: 100%;
+                        background-color: rgb(224, 220, 220);
+                        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                        margin-top: 0.7rem;
+                        padding: 9px;
+                        border: none;
+                        border-radius: 10px;
+                        outline: rgba(137, 43, 226, 0.021);
+                    }
+                }
+
+                .submit-btn {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    input {
+                        margin-top: 2rem;
+                        padding: 20px 50px;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        cursor: pointer;
+                        border: none;
+                        background-color: $buttonColor;
+                        color: rgb(250, 243, 243);
+                        transition: background-color 0.2s;
+                    }
+
+                    input:hover {
+                        background-color: $hoverColor
+                    }
+                }
+            }
+        }
+    }
 }
-              form {
-                  width: 60%;
-
-                  .form-field {
-                      margin-top: 2rem;
-                      width: 100%;
-
-                      label {
-                          font-size: 1.6rem;
-                      }
-
-                      input {
-                          width: 100%;
-                          margin-top: 0.7rem;
-                          padding: 7px;
-                          border: 1px solid $secondColor;
-                          outline-color: red;
-                      }
-                  }
-
-                  .submit-btn {
-                      display: flex;
-                      justify-content: flex-end;
-
-                      input {
-                          margin-top: 2rem;
-                          padding: 10px 20px;
-                          font-size: 1.3rem;
-                          cursor: pointer;
-                          border: none;
-                          background-color: $primaryColor;
-                          color: white;
-                          transition: background-color 0.2s;
-                      }
-
-                      input:hover {
-                          background-color: $secondColor;
-                      }
-                  }
-              }
-          }
-      }
-  }

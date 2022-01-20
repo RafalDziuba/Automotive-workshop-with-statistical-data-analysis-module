@@ -2,21 +2,11 @@ const ordersCont = document.querySelector('.orders-container');
 const loadMoreBtn = document.getElementById('loadMore');
 
 let ordersHandler = [];
-// const incraseRecords = () => {
-//     recordsPerPage = recordsPerPage + 9;
-// }
-
-//${recordsPerPage = recordsPerPage + 9}
-// + '&per=' + recordsPerPage
-// let recordsPerPage = 9;
 let page = 1;
+
 const incrasePage = () => {
     page++
 }
-// const API_LINK = 'https://car-service-api-app.herokuapp.com/repairs';
-// const URL =  `${API_LINK}?page=${page}&per=9`;
-
-
 
 const showOrders = () => {
     const API_LINK = 'https://car-service-api-app.herokuapp.com/repairs';
@@ -54,10 +44,6 @@ const showOrders = () => {
                 const spanPrice = document.createElement('span');
                 const spanDate = document.createElement('span');
 
-
-
-
-
                 spanBrand.setAttribute('class', 'brand');
                 spanPrice.setAttribute('class', 'price');
                 spanDate.setAttribute('class', 'date');
@@ -94,7 +80,6 @@ const showOrders = () => {
                 orderPrice.appendChild(spanPrice);
                 orderDate.appendChild(spanDate);
 
-
             });
             console.log(URL)
             const priceList = document.querySelectorAll('.price');
@@ -113,8 +98,6 @@ const showOrders = () => {
                 dateList[i].textContent = ordersHandler[i].created_at.slice(0, 10);
             }
 
-
-            // console.log(deleteOrderBtn)
             const section = document.querySelector('section');
 
             const deleteOrderBtn = document.querySelectorAll('.delete-btn');
@@ -152,7 +135,6 @@ const showOrders = () => {
                         let orderId = ordersHandler[i].id
                         console.log(orderId)
                         const api_link = 'https://car-service-api-app.herokuapp.com/repairs/'
-                        // const api_parameter = '\?BYPASS_AUTHENTICATION\=true'
                         const url = api_link + orderId;
 
                         fetch(url, {
@@ -171,10 +153,6 @@ const showOrders = () => {
                 })
             }
 
-
-
-            const nodeListOrders = document.querySelectorAll('.order');
-            // const allOrders = Array.from(nodeListOrders);
 
             const displayPopupBtn = document.querySelectorAll('.btn-show');
 

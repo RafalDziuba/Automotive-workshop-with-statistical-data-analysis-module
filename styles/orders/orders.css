@@ -9,7 +9,7 @@
 
 body {
   height: 200vh;
-  background-color: #e3f2fd;
+  background-color: #3D5A80;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +18,7 @@ body {
 nav {
   height: 100%;
   width: 20%;
-  background-color: #1565c0;
+  background-color: #293241;
   position: fixed;
   -webkit-box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
           box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
@@ -27,7 +27,7 @@ nav {
 nav .nav-header {
   height: 8%;
   width: 100%;
-  background-color: #2196f3;
+  background-color: #293241;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +45,7 @@ nav .nav-header {
 
 nav .nav-header p {
   font-size: 3rem;
-  color: white;
+  color: #EE6C4D;
   font-weight: bold;
 }
 
@@ -70,7 +70,7 @@ nav .nav-list-element a {
   font-size: 2rem;
   cursor: pointer;
   text-decoration: none;
-  color: white;
+  color: #E0FBFC;
   -webkit-transition: margin 0.2s;
   transition: margin 0.2s;
   display: -webkit-box;
@@ -87,8 +87,8 @@ nav .nav-list-element a i {
 }
 
 nav .nav-list-element a:hover {
-  text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 8px;
-  margin-left: 15%;
+  text-shadow: rgba(154, 226, 226, 0.7) 0px 0px 8px;
+  margin-left: 13%;
 }
 
 nav .nav-logout {
@@ -102,7 +102,7 @@ nav .nav-logout {
 
 nav .nav-logout a {
   text-decoration: none;
-  color: white;
+  color: #E0FBFC;
   font-size: 2rem;
   margin-left: 12%;
   -webkit-transition: margin 0.2s;
@@ -115,8 +115,7 @@ nav .nav-logout a i {
 }
 
 nav .nav-logout a:hover {
-  text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 8px;
-  margin-left: 15%;
+  text-shadow: rgba(154, 226, 226, 0.7) 0px 0px 8px;
 }
 
 section {
@@ -152,18 +151,19 @@ section .orders-container .order {
   height: 150px;
   width: 320px;
   margin-left: 5px;
-  background-color: #2196f3;
+  background: #83a4d4;
+  background: -webkit-gradient(linear, left top, right top, from(#b6fbff), to(#83a4d4));
+  background: linear-gradient(to right, #b6fbff, #83a4d4);
   margin-top: 2rem;
-  border-radius: 0px 20px 0px 20px;
+  border-radius: 15px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   overflow: hidden;
 }
 
 section .orders-container .order .order-menu-container {
-  height: 25%;
+  height: 22%;
   width: 100%;
-  background-color: #55b2e7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,7 +181,7 @@ section .orders-container .order .order-menu-container button {
 
 section .orders-container .order .order-menu-container button i {
   font-size: 2.4rem;
-  color: #faf8f8;
+  color: gray;
 }
 
 section .orders-container .order .order-menu-container .btn-show {
@@ -189,11 +189,11 @@ section .orders-container .order .order-menu-container .btn-show {
 }
 
 section .orders-container .order .order-menu-container button:hover .fa-trash {
-  color: red;
+  color: #e25252;
 }
 
 section .orders-container .order .order-menu-container .btn-show:hover i {
-  color: purple;
+  color: #0d6dc7;
 }
 
 section .orders-container .order .order-basic-style {
@@ -208,7 +208,7 @@ section .orders-container .order .order-basic-style {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  color: black;
 }
 
 section .orders-container .order .order-basic-style span {
@@ -222,7 +222,7 @@ section .orders-container .order .order-basic-style .model {
 section .cancel-btn-popup {
   width: 40%;
   height: 100px;
-  background-color: #2a56e7;
+  background-color: #98C1D9;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -265,7 +265,7 @@ section .cancel-btn-popup button {
 
 section .cancel-btn-popup .cancel-btn-confirm {
   margin-left: 8rem;
-  background-color: #f11c1c;
+  background-color: #e25252;
   -webkit-transition: -webkit-box-shadow 0.2s;
   transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
@@ -273,8 +273,8 @@ section .cancel-btn-popup .cancel-btn-confirm {
 }
 
 section .cancel-btn-popup .cancel-btn-confirm:hover {
-  -webkit-box-shadow: 0px 0px 8px 0px #f11c1c;
-          box-shadow: 0px 0px 8px 0px #f11c1c;
+  -webkit-box-shadow: 0px 0px 8px 0px #e25252;
+          box-shadow: 0px 0px 8px 0px #e25252;
 }
 
 section .cancel-btn-popup .cancel-btn-decline {
@@ -289,7 +289,7 @@ section .cancel-btn-popup .cancel-btn-decline:hover {
 section .order-popup {
   width: 40%;
   height: 75vh;
-  background-color: #1565c0;
+  background-color: #98C1D9;
   position: fixed;
   z-index: 1;
   top: 50%;
@@ -348,13 +348,13 @@ section .order-popup .popup-menu .close-btn {
 section .order-popup .popup-menu .close-btn .close {
   padding: 7px 10px;
   border-radius: 50%;
-  border: 1px solid white;
-  background-color: white;
+  border: none;
+  background-color: #EE6C4D;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #1565c0;
+  color: #E0FBFC;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
           box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
   -webkit-transition: padding 0.2s linear;
@@ -386,8 +386,16 @@ section .pagenumbers button {
 section #loadMore {
   padding: 1.6rem 2.4rem;
   cursor: pointer;
-  font-size: 1.4rem;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
   color: white;
-  background-color: #155dbb;
+  background-color: #EE6C4D;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+section #loadMore:hover {
+  background-color: blueviolet;
 }
 /*# sourceMappingURL=orders.css.map */

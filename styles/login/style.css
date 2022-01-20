@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #e3f2fd;
+  background-color: #293241;
   width: 100%;
   height: 100vh;
 }
@@ -35,7 +35,7 @@ main h2 {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 5.2rem;
-  color: #2196f3;
+  color: #3D5A80;
 }
 
 main .form-container {
@@ -129,7 +129,7 @@ main .form-container form .submit-button input {
   width: 40%;
   cursor: pointer;
   border: none;
-  background-color: #2196f3;
+  background-color: #3D5A80;
   color: white;
 }
 /*# sourceMappingURL=style.css.map */

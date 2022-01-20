@@ -10,7 +10,7 @@
 
 body {
     height: 200vh;
-    background-color: $mainColor;
+    background-color: $primaryColor;
     display: flex;
 
 }
@@ -20,14 +20,14 @@ nav {
 
     height: 100%;
     width: 20%;
-    background-color: $secondColor;
+    background-color: $mainColor;
     position: fixed;
     box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
 
     .nav-header {
         height: 8%;
         width: 100%;
-        background-color: $primaryColor;
+        background-color: $mainColor;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -35,7 +35,7 @@ nav {
 
         p {
             font-size: 3rem;
-            color: white;
+            color: $buttonColor;
             font-weight: bold;
         }
     }
@@ -48,7 +48,6 @@ nav {
         height: 6%;
         width: 100%;
         margin-top: 5%;
-        //   border-bottom: 1px solid black;
         display: flex;
         align-items: center;
 
@@ -58,7 +57,7 @@ nav {
             font-size: 2rem;
             cursor: pointer;
             text-decoration: none;
-            color: white;
+            color: $fontColor;
             transition: margin 0.2s;
             display: flex;
             align-items: center;
@@ -71,8 +70,8 @@ nav {
         }
 
         a:hover {
-            text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 8px;
-            margin-left: 15%;
+            text-shadow: rgba(154, 226, 226, 0.7) 0px 0px 8px;
+            margin-left: 13%;
         }
 
 
@@ -84,7 +83,7 @@ nav {
 
         a {
             text-decoration: none;
-            color: white;
+            color: $fontColor;
             font-size: 2rem;
             margin-left: 12%;
             transition: margin 0.2s;
@@ -96,8 +95,7 @@ nav {
         }
 
         a:hover {
-            text-shadow: rgba(255, 255, 255, 0.9) 0px 0px 8px;
-            margin-left: 15%;
+            text-shadow: rgba(154, 226, 226, 0.7) 0px 0px 8px;
         }
     }
 }
@@ -107,7 +105,6 @@ section {
     width: 80%;
     margin-left: 20%;
     display: flex;
-    // justify-content: center;
     align-items: center;
     flex-direction: column;
 
@@ -115,7 +112,6 @@ section {
     .orders-container {
 
         width: 80%;
-        // height: 90%;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -125,19 +121,20 @@ section {
             height: 150px;
             width: 320px;
             margin-left: 5px;
-            background-color: $primaryColor;
+            background: #83a4d4;
+            background: linear-gradient(to right, #b6fbff, #83a4d4);
             margin-top: 2rem;
-            border-radius: 0px 20px 0px 20px;
+            border-radius: 15px;
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             overflow: hidden;
 
             .order-menu-container {
-                height: 25%;
+                height: 22%;
                 width: 100%;
-
-                background-color: #55b2e7;
+                // background-color: $mainColor;
                 display: flex;
                 align-items: center;
+                // margin-left: 2%;
 
                 button {
                     background: none;
@@ -147,7 +144,7 @@ section {
 
                     i {
                         font-size: 2.4rem;
-                        color: rgb(250, 248, 248);
+                        color: gray;
 
                     }
                 }
@@ -157,12 +154,12 @@ section {
                 }
 
                 button:hover .fa-trash {
-                    color: red;
+                    color: rgb(226, 82, 82);
 
                 }
 
                 .btn-show:hover i {
-                    color: purple;
+                    color: rgb(13, 109, 199);
                 }
             }
 
@@ -174,7 +171,7 @@ section {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: white;
+                color: black;
 
                 span {
                     font-size: 2rem;
@@ -187,18 +184,6 @@ section {
 
             }
 
-
-            // .brand-info {
-            //     background-color: red;
-            // }
-
-            // .price-info {
-            //     background-color: green;
-            // }
-
-            // .date-info {
-            //     background-color: blue;
-            // }
         }
 
 
@@ -208,7 +193,7 @@ section {
     .cancel-btn-popup {
         width: 40%;
         height: 100px;
-        background-color: rgb(42, 86, 231);
+        background-color: $headersColor;
         position: fixed;
         left: 50%;
         top: 50%;
@@ -237,12 +222,12 @@ section {
 
         .cancel-btn-confirm {
             margin-left: 8rem;
-            background-color: rgb(241, 28, 28);
+            background-color: rgb(226, 82, 82);
             transition: box-shadow 0.2s;
         }
 
         .cancel-btn-confirm:hover {
-            box-shadow: 0px 0px 8px 0px rgba(241, 28, 28, 1);
+            box-shadow: 0px 0px 8px 0px rgba(226, 82, 82, 1);
         }
 
         .cancel-btn-decline {
@@ -257,7 +242,7 @@ section {
     .order-popup {
         width: 40%;
         height: 75vh;
-        background-color: $secondColor;
+        background-color: $headersColor;
         position: fixed;
         z-index: 1;
         top: 50%;
@@ -298,13 +283,13 @@ section {
                 .close {
                     padding: 7px 10px;
                     border-radius: 50%;
-                    border: 1px solid white;
-                    background-color: white;
+                    border: none;
+                    background-color: $buttonColor;
                     text-transform: uppercase;
                     font-weight: bold;
                     font-size: 1.2rem;
                     cursor: pointer;
-                    color: $secondColor;
+                    color: $fontColor;
                     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
                     transition: padding 0.2s linear;
                 }
@@ -331,8 +316,14 @@ section {
     #loadMore {
         padding: 1.6rem 2.4rem;
         cursor: pointer;
-        font-size: 1.4rem;
+        border: none;
+        font-size: 1.6rem;
+        font-weight: bold;
         color: white;
-        background-color: rgb(21, 93, 187);
+        background-color: $buttonColor;
+        transition: background-color 0.2s;
+    }
+    #loadMore:hover {
+        background-color: $hoverColor;
     }
 }

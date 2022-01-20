@@ -8,7 +8,7 @@ const showStats = () => {
         }
     }).then(resp => {
         console.log(resp.data);
-        //maintenance
+
         const mAudiValue = document.getElementById('audi-maintenance');
         const mBmwValue = document.getElementById('bmw-maintenance');
         const mCitroenValue = document.getElementById('citroen-maintenance');
@@ -67,8 +67,6 @@ const showStats = () => {
             mToyotaValue.textContent = resp.data.maintenance.Toyota;
         };
 
-
-        //cooling-system
         const csAudiValue = document.getElementById('audi-cooling-system');
         const csBmwValue = document.getElementById('bmw-cooling-system');
         const csCitroenValue = document.getElementById('citroen-cooling-system');
@@ -126,8 +124,6 @@ const showStats = () => {
             csToyotaValue.textContent = resp.data.cooling_system.Toyota;
         };
 
-
-        //exhaust-system
         const exsAudiValue = document.getElementById('audi-exhaust-system');
         const exsBmwValue = document.getElementById('bmw-exhaust-system');
         const exsCitroenValue = document.getElementById('citroen-exhaust-system');
@@ -186,8 +182,6 @@ const showStats = () => {
             exsToyotaValue.textContent = resp.data.exhaust_system.Toyota;
         };
 
-
-        //brake-system
         const bsAudiValue = document.getElementById('audi-brake-system');
         const bsBmwValue = document.getElementById('bmw-brake-system');
         const bsCitroenValue = document.getElementById('citroen-brake-system');
@@ -245,9 +239,6 @@ const showStats = () => {
             bsToyotaValue.textContent = resp.data.brake_system.Toyota;
         };
 
-
-
-        //electrical-system
         const elsAudiValue = document.getElementById('audi-electrical-system');
         const elsBmwValue = document.getElementById('bmw-electrical-system');
         const elsCitroenValue = document.getElementById('citroen-electrical-system');
@@ -305,7 +296,6 @@ const showStats = () => {
             elsToyotaValue.textContent = resp.data.electrical_system.Toyota;
         };
 
-        //engine
         const engineAudiValue = document.getElementById('audi-engine');
         const engineBmwValue = document.getElementById('bmw-engine');
         const engineCitroenValue = document.getElementById('citroen-engine');
@@ -363,7 +353,6 @@ const showStats = () => {
             engineToyotaValue.textContent = resp.data.engine.Toyota;
         };
 
-        //body
         const bodyAudiValue = document.getElementById('audi-body');
         const bodyBmwValue = document.getElementById('bmw-body');
         const bodyCitroenValue = document.getElementById('citroen-body');
@@ -421,7 +410,6 @@ const showStats = () => {
             bodyToyotaValue.textContent = resp.data.body.Toyota;
         };
 
-        //suspension
         const susAudiValue = document.getElementById('audi-suspension');
         const susBmwValue = document.getElementById('bmw-suspension');
         const susCitroenValue = document.getElementById('citroen-suspension');
@@ -479,8 +467,6 @@ const showStats = () => {
             susToyotaValue.textContent = resp.data.suspension.Toyota;
         };
 
-
-        //total
         const totalAudiValue = document.getElementById('audi-total');
         const totalBmwValue = document.getElementById('bmw-total');
         const totalCitroenValue = document.getElementById('citroen-total');
@@ -676,22 +662,13 @@ const showStats = () => {
 
 
         const tab2Value = document.querySelectorAll('.t2')
-
-        // for (let i = 0; i < tab2Value.length; i++){
-        //     parseInt(tab2Value[i].textContent).toFixed(2);
-        // }
-
         const tab3Value = document.querySelectorAll('.t3')
-        // let newArr = Array.from(tab2Value)
-
-
         const tab1Value = document.querySelectorAll('.t1')
         const sumArr = [];
 
         for (let i = 0; i < tab2Value.length; i++) {
             sumArr.push(((tab1Value[i].textContent - tab2Value[i].textContent) * (tab1Value[i].textContent - tab2Value[i].textContent) / tab2Value[i].textContent).toFixed(2));
         }
-        // console.log(sumArr)
 
         for (let i = 0; i < tab2Value.length; i++) {
             tab3Value[i].textContent = sumArr[i];
@@ -699,13 +676,7 @@ const showStats = () => {
 
         const chi2 = document.getElementById('chi2-value');
         const vc = document.getElementById('vc-value');
-        //    const res =  sumArr.map(function(x){
-        //         return parseInt(x, 10);
-        //     });
-        //     console.log(res)
-        // for ( let i = 0; i < tab3Value.length; i++){
-        //     console.log(parseFloat(tab3Value[i].textContent, 8))
-        // }
+
         let chi2Value = sumArr.reduce(function (acc, val) {
             return parseFloat(acc, 16) + parseFloat(val, 16);
         }, 0);
