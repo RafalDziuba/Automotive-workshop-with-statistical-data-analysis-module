@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/usercocpit/style.css">
+    <script src="https://kit.fontawesome.com/fff128d8fd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-header">
+            <p>Welcome</p>
+        </div>
+        <div class="nav-list">
+            <div class="nav-list-element"><a href=""><i class="fas fa-home"></i>Home</a></div>
+            <div class="nav-list-element"><a href="/dist/stats.html"><i class="fas fa-chart-line"></i>Statistics</a></div>
+            <div class="nav-list-element"><a href="/dist/orders.html"><i class="fas fa-tasks"></i>Orders</a></div>
+        </div>
+        <div class="nav-logout"><a id="logout-btn" href=""><i class="fas fa-sign-out-alt"></i>Log out</a></div>
+    </nav>
+    <section>
+        <header>
+            <div class="total-orders">
+                <p>Total orders: <span id="total_orders">121</span></p>
+            </div>
+            <div class="total-income">
+                <p>Total income: <span id="total_income">100000zł</span></p>
+            </div>
+        </header>
+
+
+
+        <div class="form-container">
+            <div class="form-wrapper">
+                <form id="carForm">
+                    <div class="form-field">
+                        <label for="">Year:</label><br>
+                        <input id="year" type="number" placeholder="1990" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="">Mileage(km):</label><br>
+                        <input id="mileage" type="number" placeholder="30000" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="">Brand:</label><br>
+                        <input id="brand" type="text" placeholder="Mercedes" maxlength="20" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="">Maintenance:</label><br>
+                        <input id="maintenance" class="for-summary" type="number" placeholder="0000" >
+                    </div>
+                    <div class="form-field">
+                        <label for="">Cooling system:</label><br>
+                        <input id="cooling" class="for-summary" type="number" placeholder="0000" >
+                    </div>
+                    <div class="form-field">
+                        <label for="">Exhaust system:</label><br>
+                        <input id="exhaust" class="for-summary" type="number" placeholder="0000" >
+                    </div>
+                    <div class="form-field">
+                        <label for="">Brake system:</label><br>
+                        <input id="brake" class="for-summary" type="number" placeholder="0000" >
+                    </div>
+                    <div class="form-field">
+                        <label for="">Electrical system:</label><br>
+                        <input id="electrical" class="for-summary" type="number" placeholder="0000" >
+                    </div>
+                    <div class="form-field">
+                        <label for="">Engine:</label><br>
+                        <input id="engine" class="for-summary" type="number" placeholder="0000" >
+                    </div>
+                    <div class="form-field">
+                        <label for="">Body:</label><br>
+                        <input id="body" class="for-summary" type="number" placeholder="0000" >
+                    </div>
+                    <div class="form-field">
+                        <label for="">Suspension:</label><br>
+                        <input id="suspension" class="for-summary" type="number" placeholder="0000" >
+                    </div>
+                    <div class="form-field">
+                        <label for="">Total amount:</label><br>
+                        <input id="total" class="for-summary" type="number" placeholder="0000"  required> 
+                        
+                    </div>
+
+                    <div class="submit-btn">
+                        <input type="submit" value="Add order">
+                    </div>
+                </form>
+                <button id="total-sum">Sum total</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../src/main.js"></script>
+    <script src="../src/header.js"></script>
+    <script src="../src/logout.js"></script>
+    <script src="../src/auth.js"></script>
+</body>
+
+</html>

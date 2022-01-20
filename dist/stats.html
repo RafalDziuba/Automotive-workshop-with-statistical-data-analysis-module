@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/fff128d8fd.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles/stats/stats.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-header">
+            <p>Welcome</p>
+        </div>
+        <div class="nav-list">
+            <div class="nav-list-element"><a href="/dist/admin.html"><i class="fas fa-home"></i>Home</a></div>
+            <div class="nav-list-element"><a href="/dist/stats.html"><i class="fas fa-chart-line"></i>Statistics</a>
+            </div>
+            <div class="nav-list-element"><a href="/dist/orders.html"><i class="fas fa-tasks"></i>Orders</a></div>
+        </div>
+        <div class="nav-logout"><a id="logout-btn" href=""><i class="fas fa-sign-out-alt"></i>Log out</a></div>
+    </nav>
+
+    <section>
+        <div class="stats-container">
+            <h3>Tablica wartości obserwowanych</h3>
+            <table class="table table-striped table-dark" id="repairs-amount">
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Audi</th>
+                        <th scope="col">BMW</th>
+                        <th scope="col">Citroen</th>
+                        <th scope="col">Fiat</th>
+                        <th scope="col">Honda</th>
+                        <th scope="col">Nissan</th>
+                        <th scope="col">Opel</th>
+                        <th scope="col">Toyota</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Maintenance</th>
+                        <td id="audi-maintenance" class="t1">0</td>
+                        <td id="bmw-maintenance" class="t1">0</td>
+                        <td id="citroen-maintenance" class="t1">0</td>
+                        <td id="fiat-maintenance" class="t1">0</td>
+                        <td id="honda-maintenance" class="t1">0</td>
+                        <td id="nissan-maintenance" class="t1">0</td>
+                        <td id="opel-maintenance" class="t1">0</td>
+                        <td id="toyota-maintenance" class="t1">0</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">Cooling system</th>
+                        <td id="audi-cooling-system" class="t1">0</td>
+                        <td id="bmw-cooling-system" class="t1">0</td>
+                        <td id="citroen-cooling-system" class="t1">0</td>
+                        <td id="fiat-cooling-system" class="t1">0</td>
+                        <td id="honda-cooling-system" class="t1">0</td>
+                        <td id="nissan-cooling-system" class="t1">0</td>
+                        <td id="opel-cooling-system" class="t1">0</td>
+                        <td id="toyota-cooling-system" class="t1">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Exhaust system</th>
+                        <td id="audi-exhaust-system" class="t1">0</td>
+                        <td id="bmw-exhaust-system" class="t1">0</td>
+                        <td id="citroen-exhaust-system" class="t1">0</td>
+                        <td id="fiat-exhaust-system" class="t1">0</td>
+                        <td id="honda-exhaust-system" class="t1">0</td>
+                        <td id="nissan-exhaust-system" class="t1">0</td>
+                        <td id="opel-exhaust-system" class="t1">0</td>
+                        <td id="toyota-exhaust-system" class="t1">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Brake system</th>
+                        <td id="audi-brake-system" class="t1">0</td>
+                        <td id="bmw-brake-system" class="t1">0</td>
+                        <td id="citroen-brake-system" class="t1">0</td>
+                        <td id="fiat-brake-system" class="t1">0</td>
+                        <td id="honda-brake-system" class="t1">0</td>
+                        <td id="nissan-brake-system" class="t1">0</td>
+                        <td id="opel-brake-system" class="t1">0</td>
+                        <td id="toyota-brake-system" class="t1">0</td>
+                    </tr>
+                    <th scope="row">Electrical system</th>
+                    <td id="audi-electrical-system" class="t1">0</td>
+                    <td id="bmw-electrical-system" class="t1">0</td>
+                    <td id="citroen-electrical-system" class="t1">0</td>
+                    <td id="fiat-electrical-system" class="t1">0</td>
+                    <td id="honda-electrical-system" class="t1">0</td>
+                    <td id="nissan-electrical-system" class="t1">0</td>
+                    <td id="opel-electrical-system" class="t1">0</td>
+                    <td id="toyota-electrical-system" class="t1">0</td>
+                    </tr>
+                    <th scope="row">Engine</th>
+                    <td id="audi-engine" class="t1">0</td>
+                    <td id="bmw-engine" class="t1">0</td>
+                    <td id="citroen-engine" class="t1">0</td>
+                    <td id="fiat-engine" class="t1">0</td>
+                    <td id="honda-engine" class="t1">0</td>
+                    <td id="nissan-engine" class="t1">0</td>
+                    <td id="opel-engine" class="t1">0</td>
+                    <td id="toyota-engine" class="t1">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Body</th>
+                        <td id="audi-body" class="t1">0</td>
+                        <td id="bmw-body" class="t1">0</td>
+                        <td id="citroen-body" class="t1">0</td>
+                        <td id="fiat-body" class="t1">0</td>
+                        <td id="honda-body" class="t1">0</td>
+                        <td id="nissan-body" class="t1">0</td>
+                        <td id="opel-body" class="t1">0</td>
+                        <td id="toyota-body" class="t1">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Suspension</th>
+                        <td id="audi-suspension" class="t1">0</td>
+                        <td id="bmw-suspension" class="t1">0</td>
+                        <td id="citroen-suspension" class="t1">0</td>
+                        <td id="fiat-suspension" class="t1">0</td>
+                        <td id="honda-suspension" class="t1">0</td>
+                        <td id="nissan-suspension" class="t1">0</td>
+                        <td id="opel-suspension" class="t1">0</td>
+                        <td id="toyota-suspension" class="t1">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td id="audi-total">0</td>
+                        <td id="bmw-total">0</td>
+                        <td id="citroen-total">0</td>
+                        <td id="fiat-total">0</td>
+                        <td id="honda-total">0</td>
+                        <td id="nissan-total">0</td>
+                        <td id="opel-total">0</td>
+                        <td id="toyota-total">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Tablica wartości oczekiwanych</h3>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Audi</th>
+                        <th scope="col">BMW</th>
+                        <th scope="col">Citroen</th>
+                        <th scope="col">Fiat</th>
+                        <th scope="col">Honda</th>
+                        <th scope="col">Nissan</th>
+                        <th scope="col">Opel</th>
+                        <th scope="col">Toyota</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Maintenance</th>
+                        <td id="r1c1" class="t2">0</td>
+                        <td id="r1c2" class="t2">0</td>
+                        <td id="r1c3" class="t2">0</td>
+                        <td id="r1c4" class="t2">0</td>
+                        <td id="r1c5" class="t2">0</td>
+                        <td id="r1c6" class="t2">0</td>
+                        <td id="r1c7" class="t2">0</td>
+                        <td id="r1c8" class="t2">0</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">Cooling system</th>
+                        <td id="r2c1" class="t2">0</td>
+                        <td id="r2c2" class="t2">0</td>
+                        <td id="r2c3" class="t2">0</td>
+                        <td id="r2c4" class="t2">0</td>
+                        <td id="r2c5" class="t2">0</td>
+                        <td id="r2c6" class="t2">0</td>
+                        <td id="r2c7" class="t2">0</td>
+                        <td id="r2c8" class="t2">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Exhaust system</th>
+                        <td id="r3c1" class="t2">0</td>
+                        <td id="r3c2" class="t2">0</td>
+                        <td id="r3c3" class="t2">0</td>
+                        <td id="r3c4" class="t2">0</td>
+                        <td id="r3c5" class="t2">0</td>
+                        <td id="r3c6" class="t2">0</td>
+                        <td id="r3c7" class="t2">0</td>
+                        <td id="r3c8" class="t2">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Brake system</th>
+                        <td id="r4c1" class="t2">0</td>
+                        <td id="r4c2" class="t2">0</td>
+                        <td id="r4c3" class="t2">0</td>
+                        <td id="r4c4" class="t2">0</td>
+                        <td id="r4c5" class="t2">0</td>
+                        <td id="r4c6" class="t2">0</td>
+                        <td id="r4c7" class="t2">0</td>
+                        <td id="r4c8" class="t2">0</td>
+                    </tr>
+                    <th scope="row">Electrical system</th>
+                    <td id="r5c1" class="t2">0</td>
+                    <td id="r5c2" class="t2">0</td>
+                    <td id="r5c3" class="t2">0</td>
+                    <td id="r5c4" class="t2">0</td>
+                    <td id="r5c5" class="t2">0</td>
+                    <td id="r5c6" class="t2">0</td>
+                    <td id="r5c7" class="t2">0</td>
+                    <td id="r5c8" class="t2">0</td>
+                    </tr>
+                    <th scope="row">Engine</th>
+                    <td id="r6c1" class="t2">0</td>
+                    <td id="r6c2" class="t2">0</td>
+                    <td id="r6c3" class="t2">0</td>
+                    <td id="r6c4" class="t2">0</td>
+                    <td id="r6c5" class="t2">0</td>
+                    <td id="r6c6" class="t2">0</td>
+                    <td id="r6c7" class="t2">0</td>
+                    <td id="r6c8" class="t2">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Body</th>
+                        <td id="r7c1" class="t2">0</td>
+                        <td id="r7c2" class="t2">0</td>
+                        <td id="r7c3" class="t2">0</td>
+                        <td id="r7c4" class="t2">0</td>
+                        <td id="r7c5" class="t2">0</td>
+                        <td id="r7c6" class="t2">0</td>
+                        <td id="r7c7" class="t2">0</td>
+                        <td id="r7c8" class="t2">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Suspension</th>
+                        <td id="r8c1" class="t2">0</td>
+                        <td id="r8c2" class="t2">0</td>
+                        <td id="r8c3" class="t2">0</td>
+                        <td id="r8c4" class="t2">0</td>
+                        <td id="r8c5" class="t2">0</td>
+                        <td id="r8c6" class="t2">0</td>
+                        <td id="r8c7" class="t2">0</td>
+                        <td id="r8c8" class="t2">0</td>
+                    </tr>
+                    <!-- <tr>
+                        <th scope="row">Total</th>
+                        <td id="r9c1">0</td>
+                        <td id="r9c2">0</td>
+                        <td id="r9c3">0</td>
+                        <td id="r9c4">0</td>
+                        <td id="r9c5">0</td>
+                        <td id="r9c6">0</td>
+                        <td id="r9c7">0</td>
+                        <td id="r9c8">0</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <h3>Tabela. Obliczenia dla testu chi-kwadrat niezależności χ2</h3>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Audi</th>
+                        <th scope="col">BMW</th>
+                        <th scope="col">Citroen</th>
+                        <th scope="col">Fiat</th>
+                        <th scope="col">Honda</th>
+                        <th scope="col">Nissan</th>
+                        <th scope="col">Opel</th>
+                        <th scope="col">Toyota</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Maintenance</th>
+                        <td id="t3r1c1" class="t3">0</td>
+                        <td id="t3r1c2" class="t3">0</td>
+                        <td id="t3r1c3" class="t3">0</td>
+                        <td id="t3r1c4" class="t3">0</td>
+                        <td id="t3r1c5" class="t3">0</td>
+                        <td id="t3r1c6" class="t3">0</td>
+                        <td id="t3r1c7" class="t3">0</td>
+                        <td id="t3r1c8" class="t3">0</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">Cooling system</th>
+                        <td id="t3r2c1" class="t3">0</td>
+                        <td id="t3r2c2" class="t3">0</td>
+                        <td id="t3r2c3" class="t3">0</td>
+                        <td id="t3r2c4" class="t3">0</td>
+                        <td id="t3r2c5" class="t3">0</td>
+                        <td id="t3r2c6" class="t3">0</td>
+                        <td id="t3r2c7" class="t3">0</td>
+                        <td id="t3r2c8" class="t3">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Exhaust system</th>
+                        <td id="t3r3c1" class="t3">0</td>
+                        <td id="t3r3c2" class="t3">0</td>
+                        <td id="t3r3c3" class="t3">0</td>
+                        <td id="t3r3c4" class="t3">0</td>
+                        <td id="t3r3c5" class="t3">0</td>
+                        <td id="t3r3c6" class="t3">0</td>
+                        <td id="t3r3c7" class="t3">0</td>
+                        <td id="t3r3c8" class="t3">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Brake system</th>
+                        <td id="t3r4c1" class="t3">0</td>
+                        <td id="t3r4c2" class="t3">0</td>
+                        <td id="t3r4c3" class="t3">0</td>
+                        <td id="t3r4c4" class="t3">0</td>
+                        <td id="t3r4c5" class="t3">0</td>
+                        <td id="t3r4c6" class="t3">0</td>
+                        <td id="t3r4c7" class="t3">0</td>
+                        <td id="t3r4c8" class="t3">0</td>
+                    </tr>
+                    <th scope="row">Electrical system</th>
+                    <td id="t3r5c1" class="t3">0</td>
+                    <td id="t3r5c2" class="t3">0</td>
+                    <td id="t3r5c3" class="t3">0</td>
+                    <td id="t3r5c4" class="t3">0</td>
+                    <td id="t3r5c5" class="t3">0</td>
+                    <td id="t3r5c6" class="t3">0</td>
+                    <td id="t3r5c7" class="t3">0</td>
+                    <td id="t3r5c8" class="t3">0</td>
+                    </tr>
+                    <th scope="row">Engine</th>
+                    <td id="t3r6c1" class="t3">0</td>
+                    <td id="t3r6c2" class="t3">0</td>
+                    <td id="t3r6c3" class="t3">0</td>
+                    <td id="t3r6c4" class="t3">0</td>
+                    <td id="t3r6c5" class="t3">0</td>
+                    <td id="t3r6c6" class="t3">0</td>
+                    <td id="t3r6c7" class="t3">0</td>
+                    <td id="t3r6c8" class="t3">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Body</th>
+                        <td id="t3r7c1" class="t3">0</td>
+                        <td id="t3r7c2" class="t3">0</td>
+                        <td id="t3r7c3" class="t3">0</td>
+                        <td id="t3r7c4" class="t3">0</td>
+                        <td id="t3r7c5" class="t3">0</td>
+                        <td id="t3r7c6" class="t3">0</td>
+                        <td id="t3r7c7" class="t3">0</td>
+                        <td id="t3r7c8" class="t3">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Suspension</th>
+                        <td id="t3r8c1" class="t3">0</td>
+                        <td id="t3r8c2" class="t3">0</td>
+                        <td id="t3r8c3" class="t3">0</td>
+                        <td id="t3r8c4" class="t3">0</td>
+                        <td id="t3r8c5" class="t3">0</td>
+                        <td id="t3r8c6" class="t3">0</td>
+                        <td id="t3r8c7" class="t3">0</td>
+                        <td id="t3r8c8" class="t3">0</td>
+                    </tr>
+                    <!-- <tr>
+                        <th scope="row">Total</th>
+                        <td id="r9c1">0</td>
+                        <td id="r9c2">0</td>
+                        <td id="r9c3">0</td>
+                        <td id="r9c4">0</td>
+                        <td id="r9c5">0</td>
+                        <td id="r9c6">0</td>
+                        <td id="r9c7">0</td>
+                        <td id="r9c8">0</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <div class="results">
+            <div class="chi2"><span>Wynik testu chi-kwadrat x2:</span> <span id="chi2-value" class="value">0</span></div>
+            <div class="vc"><span>Współczynnik V-Cramera: </span> <span id="vc-value" class="value">0</span></div>
+            <div class="progress-bar-static"><div class="progress-bar-dynamic"></div></div>
+            <div class="vc-interpretation"><span>Pomiędzy zmiennymi zachodzi:</span> <span id="vci" class="value"></span></div>
+            
+
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../src/auth.js"></script>
+    <script src="../src/stats.js"></script>
+</body>
+
+</html>
