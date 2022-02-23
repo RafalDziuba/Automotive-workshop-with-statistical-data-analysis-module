@@ -702,17 +702,17 @@ const showStats = () => {
 
             const text = document.getElementById('vci');
             if (vcValue > 0 & vcValue < 0.2) {
-                text.textContent = 'Bardzo słaby związek';
+                text.textContent = 'Very weak relation';
             } else if (vcValue > 0.2 & vcValue < 0.4 ) {
-                text.textContent = 'Słaby związek';
+                text.textContent = 'Weak relation';
             } else if (vcValue > 0.4 & vcValue < 0.6) {
-                text.textContent = 'Umiarkowany związek';
+                text.textContent = 'Moderate relation';
             } else if (vcValue > 0.6 & vcValue < 0.8) {
-                text.textContent = 'Silny związek';
+                text.textContent = 'Strong relation';
             } else if (vcValue > 0.8 & vcValue < 1){
-                text.textContent = 'Bardzo silny związek'
+                text.textContent = 'Very strong relation'
             } else {
-                text.textContent = 'Wartość poza skalą! Sprawdź obliczenia!'
+                text.textContent = 'Bad value!'
             }
         }
 

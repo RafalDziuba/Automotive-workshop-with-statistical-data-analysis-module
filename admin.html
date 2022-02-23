@@ -14,22 +14,22 @@
 <body>
     <nav>
         <div class="nav-header">
-            <p>Witaj!</p>
+            <p>Welcome!</p>
         </div>
         <div class="nav-list">
-            <div class="nav-list-element"><a href=""><i class="fas fa-home"></i>Strona główna</a></div>
-            <div class="nav-list-element"><a href="/stats.html"><i class="fas fa-chart-line"></i>Statystyki</a></div>
-            <div class="nav-list-element"><a href="/orders.html"><i class="fas fa-tasks"></i>Zlecenia</a></div>
+            <div class="nav-list-element"><a href=""><i class="fas fa-home"></i>Home</a></div>
+            <div class="nav-list-element"><a href="/stats.html"><i class="fas fa-chart-line"></i>Stats</a></div>
+            <div class="nav-list-element"><a href="/orders.html"><i class="fas fa-tasks"></i>Orders</a></div>
         </div>
-        <div class="nav-logout"><a id="logout-btn" href=""><i class="fas fa-sign-out-alt"></i>Wyloguj</a></div>
+        <div class="nav-logout"><a id="logout-btn" href=""><i class="fas fa-sign-out-alt"></i>Log out</a></div>
     </nav>
     <section>
         <header>
             <div class="total-orders">
-                <p>Wszystkich zleceń: <span id="total_orders">121</span></p>
+                <p>Total orders: <span id="total_orders">121</span></p>
             </div>
             <div class="total-income">
-                <p>Całkowity przychód: <span id="total_income">100000zł</span>zł</p>
+                <p>Total income: <span id="total_income">100000zł</span>zł</p>
             </div>
         </header>
 
@@ -39,63 +39,63 @@
             <div class="form-wrapper">
                 <form id="carForm">
                     <div class="form-field">
-                        <label for="">Rok:</label><br>
+                        <label for="">Year:</label><br>
                         <input id="year" type="number" placeholder="1990" required>
                     </div>
 
                     <div class="form-field">
-                        <label for="">Przebieg(km):</label><br>
+                        <label for="">Mileage(km):</label><br>
                         <input id="mileage" type="number" placeholder="30000" required>
                     </div>
 
                     <div class="form-field">
-                        <label for="">Marka:</label><br>
+                        <label for="">Brand:</label><br>
                         <input id="brand" type="text" placeholder="Mercedes" maxlength="20" required>
                     </div>
 
                     <div class="form-field">
-                        <label for="">Serwis:</label><br>
+                        <label for="">Maintenance:</label><br>
                         <input id="maintenance" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
-                        <label for="">Układ chłodzący:</label><br>
+                        <label for="">Cooling system:</label><br>
                         <input id="cooling" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
-                        <label for="">Układ wydechowy:</label><br>
+                        <label for="">Exhaust system:</label><br>
                         <input id="exhaust" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
-                        <label for="">Układ hamulcowy:</label><br>
+                        <label for="">Brakes system:</label><br>
                         <input id="brake" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
-                        <label for="">Układ elektryczny:</label><br>
+                        <label for="">Electrical system:</label><br>
                         <input id="electrical" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
-                        <label for="">Silnik:</label><br>
+                        <label for="">Engine:</label><br>
                         <input id="engine" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
-                        <label for="">Karoseria:</label><br>
+                        <label for="">Body:</label><br>
                         <input id="body" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
-                        <label for="">Zawieszenie:</label><br>
+                        <label for="">Suspension:</label><br>
                         <input id="suspension" class="for-summary" type="number" placeholder="0000" >
                     </div>
                     <div class="form-field">
-                        <label for="">Całkowita wartość:</label><br>
+                        <label for="">Total amount:</label><br>
                         <input id="total" class="for-summary" type="number" placeholder="0000"  required> 
                         
                     </div>
 
                     <div class="submit-btn">
-                        <input type="submit" value="Dodaj zlecenie">
+                        <input type="submit" value="Add">
                     </div>
                 </form>
-                <button id="total-sum">Zlicz wartość</button>
+                <button id="total-sum">Sum!</button>
             </div>
 
         </div>

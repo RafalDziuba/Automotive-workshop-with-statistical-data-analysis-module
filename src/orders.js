@@ -314,32 +314,6 @@ const showOrders = () => {
 
                     let arrPopup = document.querySelectorAll('.popup-info');
                     console.log(arrPopup)
-                    for (let i = 0; i < arrPopup.length; i++) {
-                        if (arrPopup[i].textContent == 'maintenance:'){
-                            arrPopup[i].textContent = 'Serwis:'
-                        }
-                        if (arrPopup[i].textContent == 'engine:'){
-                            arrPopup[i].textContent = 'Silnik:'
-                        }
-                        if (arrPopup[i].textContent == 'cooling_system:'){
-                            arrPopup[i].textContent = 'Układ chłodzący:'
-                        }
-                        if (arrPopup[i].textContent == 'brake_system:'){
-                            arrPopup[i].textContent = 'Układ hamulcowy:'
-                        }
-                        if (arrPopup[i].textContent == 'exhaust_system:'){
-                            arrPopup[i].textContent = 'Układ wydechowy:'
-                        }
-                        if (arrPopup[i].textContent == 'electrical_system:'){
-                            arrPopup[i].textContent = 'Układ elektryczny:'
-                        }
-                        if (arrPopup[i].textContent == 'body:'){
-                            arrPopup[i].textContent = 'Karoseria:'
-                        }
-                        if (arrPopup[i].textContent == 'suspension:'){
-                            arrPopup[i].textContent = 'Zawieszenie:'
-                        }
-                    }
 
                 });
             }
