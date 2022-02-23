@@ -39,7 +39,11 @@ main h2 {
 }
 
 main .form-container {
+<<<<<<< HEAD
   background-color: #3D5A80;
+=======
+  background-color: #fff;
+>>>>>>> bfcdbd6f25d685fcd05e807cb1e7c9eefee5604b
   height: 60%;
   width: 50%;
   display: -webkit-box;
@@ -129,7 +133,11 @@ main .form-container form .submit-button input {
   width: 40%;
   cursor: pointer;
   border: none;
+<<<<<<< HEAD
   background-color: #EE6C4D;
+=======
+  background-color: #3D5A80;
+>>>>>>> bfcdbd6f25d685fcd05e807cb1e7c9eefee5604b
   color: white;
 }
 /*# sourceMappingURL=style.css.map */

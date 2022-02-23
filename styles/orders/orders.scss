@@ -1,0 +1,329 @@
+@import '../colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 200vh;
+    background-color: $primaryColor;
+    display: flex;
+
+}
+
+
+nav {
+
+    height: 100%;
+    width: 20%;
+    background-color: $mainColor;
+    position: fixed;
+    box-shadow: 10px 0px 15px -10px rgba(0, 0, 0, 0.65);
+
+    .nav-header {
+        height: 8%;
+        width: 100%;
+        background-color: $mainColor;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 3rem;
+            color: $buttonColor;
+            font-weight: bold;
+        }
+    }
+
+    .nav-list {
+        height: 85%;
+    }
+
+    .nav-list-element {
+        height: 6%;
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+
+
+        a {
+            margin-left: 12%;
+            font-size: 2rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: $fontColor;
+            transition: margin 0.2s;
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: 5px;
+                font-size: 2.3rem;
+
+            }
+        }
+
+        a:hover {
+            text-shadow: rgba(154, 226, 226, 0.7) 0px 0px 8px;
+            margin-left: 13%;
+        }
+
+
+    }
+
+    .nav-logout {
+        display: flex;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: $fontColor;
+            font-size: 2rem;
+            margin-left: 12%;
+            transition: margin 0.2s;
+
+            i {
+                font-size: 2.3rem;
+                margin-right: 5px;
+            }
+        }
+
+        a:hover {
+            text-shadow: rgba(154, 226, 226, 0.7) 0px 0px 8px;
+        }
+    }
+}
+
+
+section {
+    width: 80%;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    .orders-container {
+
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+        .order {
+            height: 150px;
+            width: 320px;
+            margin-left: 5px;
+            background: #83a4d4;
+            background: linear-gradient(to right, #b6fbff, #83a4d4);
+            margin-top: 2rem;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            overflow: hidden;
+
+            .order-menu-container {
+                height: 22%;
+                width: 100%;
+                // background-color: $mainColor;
+                display: flex;
+                align-items: center;
+                // margin-left: 2%;
+
+                button {
+                    background: none;
+                    border: none;
+                    margin-left: 1rem;
+                    cursor: pointer;
+
+                    i {
+                        font-size: 2.4rem;
+                        color: gray;
+
+                    }
+                }
+
+                .btn-show {
+                    margin-left: 2rem;
+                }
+
+                button:hover .fa-trash {
+                    color: rgb(226, 82, 82);
+
+                }
+
+                .btn-show:hover i {
+                    color: rgb(13, 109, 199);
+                }
+            }
+
+
+
+            .order-basic-style {
+                width: 100%;
+                height: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+
+                span {
+                    font-size: 2rem;
+                }
+
+                .model {
+                    margin-left: 5%;
+                }
+
+
+            }
+
+        }
+
+
+
+    }
+
+    .cancel-btn-popup {
+        width: 40%;
+        height: 100px;
+        background-color: $headersColor;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-25%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+        p {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        button {
+            padding: 1rem 1.8rem;
+            font-size: 1.3rem;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .cancel-btn-confirm {
+            margin-left: 8rem;
+            background-color: rgb(226, 82, 82);
+            transition: box-shadow 0.2s;
+        }
+
+        .cancel-btn-confirm:hover {
+            box-shadow: 0px 0px 8px 0px rgba(226, 82, 82, 1);
+        }
+
+        .cancel-btn-decline {
+            background-color: rgb(143, 137, 137);
+        }
+
+        .cancel-btn-decline:hover {
+            box-shadow: 0px 0px 6px 0px rgba(143, 137, 137, 1);
+        }
+    }
+
+    .order-popup {
+        width: 40%;
+        height: 75vh;
+        background-color: $headersColor;
+        position: fixed;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%, -50%);
+        display: flex;
+        flex-direction: column;
+
+        .orders-info-container {
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .popup-orders-info {
+                width: 80%;
+                margin-top: 2%;
+                background-color: white;
+                padding: 7px;
+                box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .popup-menu {
+            width: 100%;
+
+            .close-btn {
+                position: absolute;
+                right: 2%;
+                top: 2%;
+
+
+                .close {
+                    padding: 7px 10px;
+                    border-radius: 50%;
+                    border: none;
+                    background-color: $buttonColor;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    color: $fontColor;
+                    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
+                    transition: padding 0.2s linear;
+                }
+
+                .close:hover {
+                    padding: 9px 12px;
+                }
+            }
+        }
+    }
+
+    .pagenumbers {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        button {
+            padding: 3px 5px;
+            margin-top: 3rem;
+            margin-left: 0.5rem;
+        }
+    }
+
+    #loadMore {
+        padding: 1.6rem 2.4rem;
+        cursor: pointer;
+        border: none;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: white;
+        background-color: $buttonColor;
+        transition: background-color 0.2s;
+    }
+    #loadMore:hover {
+        background-color: $hoverColor;
+    }
+}

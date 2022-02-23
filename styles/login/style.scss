@@ -33,7 +33,11 @@ main {
     }
 
     .form-container {
+<<<<<<< HEAD
         background-color: $primaryColor;
+=======
+        background-color: #fff;
+>>>>>>> bfcdbd6f25d685fcd05e807cb1e7c9eefee5604b
         height: 60%;
         width: 50%;
         display: flex;
@@ -90,7 +94,11 @@ main {
                     width: 40%;
                     cursor: pointer;
                     border: none;
+<<<<<<< HEAD
                     background-color: $buttonColor;
+=======
+                    background-color: $primaryColor;
+>>>>>>> bfcdbd6f25d685fcd05e807cb1e7c9eefee5604b
                     color: white;
                 }
             }

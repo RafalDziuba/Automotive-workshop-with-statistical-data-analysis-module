@@ -6,7 +6,6 @@ const yearField = document.getElementById('year');
 const mileageField = document.getElementById('mileage');
 const brandField = document.getElementById('brand');
 
-
 const autoSummaryBtn = document.getElementById('total-sum');
 
 const totalAmount = (e) => {
