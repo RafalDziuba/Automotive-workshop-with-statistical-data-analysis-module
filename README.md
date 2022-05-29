@@ -1,4 +1,4 @@
-# Engineering projece
+# Engineering project
 Live version is available: workshop-stats.netlify.app
 login: administrator
 password: secure_password
