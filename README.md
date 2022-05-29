@@ -1,5 +1,7 @@
 # Engineering projece
-
+Live version is available: workshop-stats.netlify.app
+login: administrator
+password: secure_password
 Hello!
 
 ## What it is?
