@@ -1,7 +1,7 @@
-# Engineering project
-Live version is available: workshop-stats.netlify.app
-login: administrator
-password: secure_password
+## Engineering project
+# Live version is available: ** workshop-stats.netlify.app **
+# login: administrator
+# password: secure_password
 Hello!
 
 ## What it is?
